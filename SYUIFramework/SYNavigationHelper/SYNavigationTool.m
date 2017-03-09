@@ -1,9 +1,9 @@
 //
-//  SFHandleNavigationBar.m
-//  SofficeMoi
+//  SYNavigationTool.m
+//  SYFrameWork
 //
-//  Created by Eayon on 5/14/15.
-//  Copyright (c) 2015 Soffice. All rights reserved.
+//  Created by 王声远 on 17/3/9.
+//  Copyright © 2017年 王声远. All rights reserved.
 //
 
 #import "SYNavigationTool.h"

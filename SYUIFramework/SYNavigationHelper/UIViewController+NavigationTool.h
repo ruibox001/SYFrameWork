@@ -1,9 +1,9 @@
 //
-//  UIViewController+STKNavigation.h
-//  Tronker
+//  UIViewController+NavigationTool.h
+//  SYFrameWork
 //
-//  Created by 王声远 on 17/2/25.
-//  Copyright © 2017年 Shenzhen Soffice Software. All rights reserved.
+//  Created by 王声远 on 17/3/9.
+//  Copyright © 2017年 王声远. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

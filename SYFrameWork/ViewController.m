@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "SYAlertBuilder.h"
-#import "SYNavigationHeader.h"
+#import "SYUIFrameworkHeader.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -22,10 +22,16 @@
     //alert使用
 //    AlertMaker().title(@"这里标题").message(@"这里内容").style(UIAlertControllerStyleAlert).cancelAction(@"取消",UIAlertActionStyleDefault,nil).addAction(@"Action",UIAlertActionStyleDefault,nil).show(self);
     
-    [self addNavigationTitle:@"标题"];
-    [self addNavigationLeft:[UIImage imageNamed:@"back_black"] clickBlock:nil];
-    [self addNavigationRight:@"协议" clickBlock:nil];
-    self.view.backgroundColor = [UIColor orangeColor];
+    //导航栏左右返回键定义
+//    [self addNavigationTitle:@"标题"];
+//    [self addNavigationLeft:[UIImage imageNamed:@"back_black"] clickBlock:nil];
+//    [self addNavigationRight:@"协议" clickBlock:nil];
+    
+    NSArray *imgs = @[@"640x1136page1",@"640x1136page2",@"640x1136page3"];
+    guiViewBuilder().images(imgs).btnBottonOffset(50).createBtn(@"立即体验",[UIColor redColor],[UIColor blackColor],8,CGSizeMake(100, 40),12,^(){
+        NSLog(@"click");
+    }).addImageName(@"640x1136page2").show();
+
 }
 
 @end
