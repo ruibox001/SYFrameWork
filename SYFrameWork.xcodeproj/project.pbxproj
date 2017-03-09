@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					9A61C9681E7102C900B10D09 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 3HJPXWF4NR;
 						ProvisioningStyle = Automatic;
 					};
 					9A61C9811E7102C900B10D09 = {
@@ -424,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3HJPXWF4NR;
 				INFOPLIST_FILE = SYFrameWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.SYFrameWork;
@@ -435,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3HJPXWF4NR;
 				INFOPLIST_FILE = SYFrameWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.SYFrameWork;
