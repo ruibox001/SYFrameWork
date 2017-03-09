@@ -16,6 +16,7 @@
 		9A61C9871E7102C900B10D09 /* SYFrameWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9861E7102C900B10D09 /* SYFrameWorkTests.m */; };
 		9A61C9921E7102C900B10D09 /* SYFrameWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9911E7102C900B10D09 /* SYFrameWorkUITests.m */; };
 		9A61C9A91E71068600B10D09 /* SYAlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9A81E71068600B10D09 /* SYAlertBuilder.m */; };
+		9A61C9AD1E7107D900B10D09 /* SFUIBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9AC1E7107D900B10D09 /* SFUIBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		9A61C9931E7102C900B10D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A61C9A71E71068600B10D09 /* SYAlertBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlertBuilder.h; sourceTree = "<group>"; };
 		9A61C9A81E71068600B10D09 /* SYAlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlertBuilder.m; sourceTree = "<group>"; };
+		9A61C9AB1E7107D900B10D09 /* SFUIBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUIBuilder.h; sourceTree = "<group>"; };
+		9A61C9AC1E7107D900B10D09 /* SFUIBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUIBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,7 @@
 		9A61C99F1E71064900B10D09 /* SYUIFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9A61C9AA1E7107D900B10D09 /* SYUIBuilder */,
 				9A61C9A61E71068600B10D09 /* SYAlertBuilder */,
 			);
 			path = SYUIFramework;
@@ -159,6 +163,15 @@
 				9A61C9A81E71068600B10D09 /* SYAlertBuilder.m */,
 			);
 			path = SYAlertBuilder;
+			sourceTree = "<group>";
+		};
+		9A61C9AA1E7107D900B10D09 /* SYUIBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				9A61C9AB1E7107D900B10D09 /* SFUIBuilder.h */,
+				9A61C9AC1E7107D900B10D09 /* SFUIBuilder.m */,
+			);
+			path = SYUIBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +310,7 @@
 			files = (
 				9A61C9741E7102C900B10D09 /* ViewController.m in Sources */,
 				9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */,
+				9A61C9AD1E7107D900B10D09 /* SFUIBuilder.m in Sources */,
 				9A61C9A91E71068600B10D09 /* SYAlertBuilder.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 			);
