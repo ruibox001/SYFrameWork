@@ -16,7 +16,11 @@
 		9A61C9871E7102C900B10D09 /* SYFrameWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9861E7102C900B10D09 /* SYFrameWorkTests.m */; };
 		9A61C9921E7102C900B10D09 /* SYFrameWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9911E7102C900B10D09 /* SYFrameWorkUITests.m */; };
 		9A61C9A91E71068600B10D09 /* SYAlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9A81E71068600B10D09 /* SYAlertBuilder.m */; };
-		9A61C9AD1E7107D900B10D09 /* SFUIBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9AC1E7107D900B10D09 /* SFUIBuilder.m */; };
+		9A61C9AD1E7107D900B10D09 /* SYUIBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9AC1E7107D900B10D09 /* SYUIBuilder.m */; };
+		9A61C9B31E7121B600B10D09 /* SYNavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9B01E7121B600B10D09 /* SYNavigationTool.m */; };
+		9A61C9B41E7121B600B10D09 /* UIViewController+NavigationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9B21E7121B600B10D09 /* UIViewController+NavigationTool.m */; };
+		9A61C9B91E7127FF00B10D09 /* back_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A61C9B71E7127FF00B10D09 /* back_white@3x.png */; };
+		9A61C9BA1E7127FF00B10D09 /* back_black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A61C9B81E7127FF00B10D09 /* back_black@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +59,15 @@
 		9A61C9931E7102C900B10D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A61C9A71E71068600B10D09 /* SYAlertBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlertBuilder.h; sourceTree = "<group>"; };
 		9A61C9A81E71068600B10D09 /* SYAlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlertBuilder.m; sourceTree = "<group>"; };
-		9A61C9AB1E7107D900B10D09 /* SFUIBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUIBuilder.h; sourceTree = "<group>"; };
-		9A61C9AC1E7107D900B10D09 /* SFUIBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUIBuilder.m; sourceTree = "<group>"; };
+		9A61C9AB1E7107D900B10D09 /* SYUIBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIBuilder.h; sourceTree = "<group>"; };
+		9A61C9AC1E7107D900B10D09 /* SYUIBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUIBuilder.m; sourceTree = "<group>"; };
+		9A61C9AF1E7121B600B10D09 /* SYNavigationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNavigationTool.h; sourceTree = "<group>"; };
+		9A61C9B01E7121B600B10D09 /* SYNavigationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNavigationTool.m; sourceTree = "<group>"; };
+		9A61C9B11E7121B600B10D09 /* UIViewController+NavigationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavigationTool.h"; sourceTree = "<group>"; };
+		9A61C9B21E7121B600B10D09 /* UIViewController+NavigationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavigationTool.m"; sourceTree = "<group>"; };
+		9A61C9B61E7126BB00B10D09 /* SYNavigationHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYNavigationHeader.h; sourceTree = "<group>"; };
+		9A61C9B71E7127FF00B10D09 /* back_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_white@3x.png"; sourceTree = "<group>"; };
+		9A61C9B81E7127FF00B10D09 /* back_black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_black@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +161,7 @@
 		9A61C99F1E71064900B10D09 /* SYUIFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9A61C9AE1E7121B600B10D09 /* SYNavigationHelper */,
 				9A61C9AA1E7107D900B10D09 /* SYUIBuilder */,
 				9A61C9A61E71068600B10D09 /* SYAlertBuilder */,
 			);
@@ -168,10 +180,24 @@
 		9A61C9AA1E7107D900B10D09 /* SYUIBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				9A61C9AB1E7107D900B10D09 /* SFUIBuilder.h */,
-				9A61C9AC1E7107D900B10D09 /* SFUIBuilder.m */,
+				9A61C9AB1E7107D900B10D09 /* SYUIBuilder.h */,
+				9A61C9AC1E7107D900B10D09 /* SYUIBuilder.m */,
 			);
 			path = SYUIBuilder;
+			sourceTree = "<group>";
+		};
+		9A61C9AE1E7121B600B10D09 /* SYNavigationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9A61C9AF1E7121B600B10D09 /* SYNavigationTool.h */,
+				9A61C9B01E7121B600B10D09 /* SYNavigationTool.m */,
+				9A61C9B11E7121B600B10D09 /* UIViewController+NavigationTool.h */,
+				9A61C9B21E7121B600B10D09 /* UIViewController+NavigationTool.m */,
+				9A61C9B61E7126BB00B10D09 /* SYNavigationHeader.h */,
+				9A61C9B71E7127FF00B10D09 /* back_white@3x.png */,
+				9A61C9B81E7127FF00B10D09 /* back_black@3x.png */,
+			);
+			path = SYNavigationHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +307,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A61C9BA1E7127FF00B10D09 /* back_black@3x.png in Resources */,
+				9A61C9B91E7127FF00B10D09 /* back_white@3x.png in Resources */,
 				9A61C97C1E7102C900B10D09 /* LaunchScreen.storyboard in Resources */,
 				9A61C9791E7102C900B10D09 /* Assets.xcassets in Resources */,
 				9A61C9771E7102C900B10D09 /* Main.storyboard in Resources */,
@@ -309,10 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A61C9741E7102C900B10D09 /* ViewController.m in Sources */,
+				9A61C9B41E7121B600B10D09 /* UIViewController+NavigationTool.m in Sources */,
 				9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */,
-				9A61C9AD1E7107D900B10D09 /* SFUIBuilder.m in Sources */,
+				9A61C9AD1E7107D900B10D09 /* SYUIBuilder.m in Sources */,
 				9A61C9A91E71068600B10D09 /* SYAlertBuilder.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
+				9A61C9B31E7121B600B10D09 /* SYNavigationTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3HJPXWF4NR;
 				INFOPLIST_FILE = SYFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.SYFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,6 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3HJPXWF4NR;
 				INFOPLIST_FILE = SYFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cn.SYFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";

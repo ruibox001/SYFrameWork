@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SFUIBuilder : NSObject
+@interface SYUIBuilder : NSObject
 
 #pragma mark - UIButton
 + (UIButton *)createButtonWithType:(UIButtonType)type

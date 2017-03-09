@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SYAlertBuilder.h"
+#import "SYNavigationHeader.h"
 
 @interface ViewController ()
 
@@ -16,14 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+    //alert使用
+//    AlertMaker().title(@"这里标题").message(@"这里内容").style(UIAlertControllerStyleAlert).cancelAction(@"取消",UIAlertActionStyleDefault,nil).addAction(@"Action",UIAlertActionStyleDefault,nil).show(self);
+    
+    [self addNavigationTitle:@"标题"];
+    [self addNavigationLeft:[UIImage imageNamed:@"back_black"] clickBlock:nil];
+    [self addNavigationRight:@"协议" clickBlock:nil];
+    self.view.backgroundColor = [UIColor orangeColor];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

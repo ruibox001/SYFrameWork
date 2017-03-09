@@ -6,11 +6,11 @@
 //  Copyright © 2017年 王声远. All rights reserved.
 //
 
-#import "SFUIBuilder.h"
+#import "SYUIBuilder.h"
 
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 
-@implementation SFUIBuilder
+@implementation SYUIBuilder
 
 + (UIButton *)createButtonWithType:(UIButtonType)type
                              frame:(CGRect)frame
