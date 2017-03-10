@@ -28,6 +28,7 @@
 		9A61C9DF1E714C2100B10D09 /* SYGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9D61E714C2100B10D09 /* SYGuideView.m */; };
 		9A61C9E01E714C2100B10D09 /* SYGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9D81E714C2100B10D09 /* SYGuideViewCell.m */; };
 		9A61C9E11E714C2100B10D09 /* SYGuiViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9DA1E714C2100B10D09 /* SYGuiViewBuilder.m */; };
+		9A6F59BE1E725869002A29FA /* UIView+SYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59BD1E725869002A29FA /* UIView+SYHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		9A61C9D81E714C2100B10D09 /* SYGuideViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGuideViewCell.m; sourceTree = "<group>"; };
 		9A61C9D91E714C2100B10D09 /* SYGuiViewBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGuiViewBuilder.h; sourceTree = "<group>"; };
 		9A61C9DA1E714C2100B10D09 /* SYGuiViewBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGuiViewBuilder.m; sourceTree = "<group>"; };
+		9A6F59BC1E725869002A29FA /* UIView+SYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYHelper.h"; sourceTree = "<group>"; };
+		9A6F59BD1E725869002A29FA /* UIView+SYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,7 @@
 		9A61C99F1E71064900B10D09 /* SYUIFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9A6F59BB1E725844002A29FA /* SYViewHelper */,
 				9A61C9CF1E714C2100B10D09 /* SYGuideView */,
 				9A61C9AE1E7121B600B10D09 /* SYNavigationHelper */,
 				9A61C9AA1E7107D900B10D09 /* SYUIBuilder */,
@@ -243,6 +247,15 @@
 				9A61C9D41E714C2100B10D09 /* btn_image@3x.png */,
 			);
 			path = 320x568;
+			sourceTree = "<group>";
+		};
+		9A6F59BB1E725844002A29FA /* SYViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9A6F59BC1E725869002A29FA /* UIView+SYHelper.h */,
+				9A6F59BD1E725869002A29FA /* UIView+SYHelper.m */,
+			);
+			path = SYViewHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +407,7 @@
 				9A61C9DF1E714C2100B10D09 /* SYGuideView.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A61C9B31E7121B600B10D09 /* SYNavigationTool.m in Sources */,
+				9A6F59BE1E725869002A29FA /* UIView+SYHelper.m in Sources */,
 				9A61C9E01E714C2100B10D09 /* SYGuideViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

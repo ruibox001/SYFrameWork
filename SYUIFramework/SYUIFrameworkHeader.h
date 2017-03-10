@@ -21,4 +21,7 @@
 //引导页构建器
 #import "SYGuiViewBuilder.h"
 
+//界面的工具类
+#import "UIView+SYHelper.h"
+
 #endif /* SYUIFrameworkHeader_h */
