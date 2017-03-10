@@ -9,6 +9,11 @@
 #import "ViewController.h"
 #import "SYUIFrameworkHeader.h"
 
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "SYTabBarController.h"
+
 @interface ViewController ()
 
 
@@ -36,6 +41,34 @@
     //渐变测试
 //    [self.view viewAddAlphaColors:@[[UIColor redColor],[UIColor blueColor]] startPoint:CGPointMake(0.5, 0) endPoint:CGPointMake(0.5, 1.0)];
 
+    [[UIApplication sharedApplication].delegate window].rootViewController = [ViewController returnContentViewController];
+}
+
+//tarBar构建
++ (SYTabBarController *)returnContentViewController
+{
+    SYTabBarController *tabBarCtl = [[SYTabBarController alloc]init];
+    
+    // 筛选
+    FirstViewController * screeningCtlr = [[FirstViewController alloc] init];
+    UINavigationController *screeningNav = [[UINavigationController alloc]initWithRootViewController:screeningCtlr];
+    
+    
+    // 面试
+    SecondViewController *interviewCtl = [[SecondViewController alloc] init];
+    UINavigationController *interviewNav = [[UINavigationController alloc]initWithRootViewController:interviewCtl];
+    
+    // 我的
+    ThirdViewController *mineCtl = [[ThirdViewController alloc] init];
+    UINavigationController *mineNav = [[UINavigationController alloc]initWithRootViewController:mineCtl];
+    
+    tabBarCtl.viewControllers = @[screeningNav,interviewNav,mineNav];
+    
+    // 添加自定义Tabbar
+    [tabBarCtl setCustomTabBarCtrlView];
+    
+    return tabBarCtl;
+    
 }
 
 @end
