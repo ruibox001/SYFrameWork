@@ -29,19 +29,21 @@
 		9A61C9E01E714C2100B10D09 /* SYGuideViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9D81E714C2100B10D09 /* SYGuideViewCell.m */; };
 		9A61C9E11E714C2100B10D09 /* SYGuiViewBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9DA1E714C2100B10D09 /* SYGuiViewBuilder.m */; };
 		9A6F59BE1E725869002A29FA /* UIView+SYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59BD1E725869002A29FA /* UIView+SYHelper.m */; };
-		9A6F59C21E72790D002A29FA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59C11E72790D002A29FA /* FirstViewController.m */; };
-		9A6F59C51E727921002A29FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59C41E727921002A29FA /* SecondViewController.m */; };
-		9A6F59C81E72792C002A29FA /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59C71E72792C002A29FA /* ThirdViewController.m */; };
 		9A6F59CB1E7279D9002A29FA /* SYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59C91E7279D9002A29FA /* SYTabBarController.m */; };
 		9A6F59CE1E727A2E002A29FA /* SYTabBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59CD1E727A2E002A29FA /* SYTabBarButtonItem.m */; };
 		9A6F59D11E727A8A002A29FA /* SYTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59D01E727A8A002A29FA /* SYTabBarModel.m */; };
 		9A6F59D41E727AB2002A29FA /* SYUnReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59D31E727AB2002A29FA /* SYUnReadView.m */; };
-		9A6F59E71E727F1D002A29FA /* icon_interview_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6F59DB1E727F1D002A29FA /* icon_interview_select@3x.png */; };
-		9A6F59E91E727F1D002A29FA /* icon_interview_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6F59DD1E727F1D002A29FA /* icon_interview_unselect@3x.png */; };
-		9A6F59EB1E727F1D002A29FA /* icon_mine_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6F59DF1E727F1D002A29FA /* icon_mine_select@3x.png */; };
-		9A6F59ED1E727F1D002A29FA /* icon_mine_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6F59E11E727F1D002A29FA /* icon_mine_unselect@3x.png */; };
-		9A6F59EF1E727F1D002A29FA /* icon_screening_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6F59E31E727F1D002A29FA /* icon_screening_select@3x.png */; };
-		9A6F59F11E727F1D002A29FA /* icon_screening_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6F59E51E727F1D002A29FA /* icon_screening_unselect@3x.png */; };
+		9A804C771E7396F800B4FCB3 /* SYTabBarMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C761E7396F800B4FCB3 /* SYTabBarMaker.m */; };
+		9A804C7D1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C7C1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m */; };
+		9A804C851E73EC5C00B4FCB3 /* icon_interview_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C7F1E73EC5C00B4FCB3 /* icon_interview_select@3x.png */; };
+		9A804C861E73EC5C00B4FCB3 /* icon_interview_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C801E73EC5C00B4FCB3 /* icon_interview_unselect@3x.png */; };
+		9A804C871E73EC5C00B4FCB3 /* icon_mine_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C811E73EC5C00B4FCB3 /* icon_mine_select@3x.png */; };
+		9A804C881E73EC5C00B4FCB3 /* icon_mine_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C821E73EC5C00B4FCB3 /* icon_mine_unselect@3x.png */; };
+		9A804C891E73EC5C00B4FCB3 /* icon_screening_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C831E73EC5C00B4FCB3 /* icon_screening_select@3x.png */; };
+		9A804C8A1E73EC5C00B4FCB3 /* icon_screening_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C841E73EC5C00B4FCB3 /* icon_screening_unselect@3x.png */; };
+		9A804C911E73EC6500B4FCB3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C8B1E73EC6500B4FCB3 /* SecondViewController.m */; };
+		9A804C921E73EC6500B4FCB3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C8D1E73EC6500B4FCB3 /* FirstViewController.m */; };
+		9A804C931E73EC6500B4FCB3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C8F1E73EC6500B4FCB3 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,12 +104,6 @@
 		9A61C9DA1E714C2100B10D09 /* SYGuiViewBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGuiViewBuilder.m; sourceTree = "<group>"; };
 		9A6F59BC1E725869002A29FA /* UIView+SYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYHelper.h"; sourceTree = "<group>"; };
 		9A6F59BD1E725869002A29FA /* UIView+SYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYHelper.m"; sourceTree = "<group>"; };
-		9A6F59C01E72790D002A29FA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		9A6F59C11E72790D002A29FA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		9A6F59C31E727921002A29FA /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		9A6F59C41E727921002A29FA /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		9A6F59C61E72792C002A29FA /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
-		9A6F59C71E72792C002A29FA /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		9A6F59C91E7279D9002A29FA /* SYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTabBarController.m; sourceTree = "<group>"; };
 		9A6F59CA1E7279D9002A29FA /* SYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTabBarController.h; sourceTree = "<group>"; };
 		9A6F59CC1E727A2E002A29FA /* SYTabBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTabBarButtonItem.h; sourceTree = "<group>"; };
@@ -116,12 +112,22 @@
 		9A6F59D01E727A8A002A29FA /* SYTabBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTabBarModel.m; sourceTree = "<group>"; };
 		9A6F59D21E727AB2002A29FA /* SYUnReadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUnReadView.h; sourceTree = "<group>"; };
 		9A6F59D31E727AB2002A29FA /* SYUnReadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUnReadView.m; sourceTree = "<group>"; };
-		9A6F59DB1E727F1D002A29FA /* icon_interview_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_interview_select@3x.png"; sourceTree = "<group>"; };
-		9A6F59DD1E727F1D002A29FA /* icon_interview_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_interview_unselect@3x.png"; sourceTree = "<group>"; };
-		9A6F59DF1E727F1D002A29FA /* icon_mine_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_mine_select@3x.png"; sourceTree = "<group>"; };
-		9A6F59E11E727F1D002A29FA /* icon_mine_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_mine_unselect@3x.png"; sourceTree = "<group>"; };
-		9A6F59E31E727F1D002A29FA /* icon_screening_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_screening_select@3x.png"; sourceTree = "<group>"; };
-		9A6F59E51E727F1D002A29FA /* icon_screening_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_screening_unselect@3x.png"; sourceTree = "<group>"; };
+		9A804C751E7396F800B4FCB3 /* SYTabBarMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTabBarMaker.h; sourceTree = "<group>"; };
+		9A804C761E7396F800B4FCB3 /* SYTabBarMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTabBarMaker.m; sourceTree = "<group>"; };
+		9A804C7B1E73E74100B4FCB3 /* UIViewController+TabBarHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TabBarHidden.h"; sourceTree = "<group>"; };
+		9A804C7C1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TabBarHidden.m"; sourceTree = "<group>"; };
+		9A804C7F1E73EC5C00B4FCB3 /* icon_interview_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_interview_select@3x.png"; sourceTree = "<group>"; };
+		9A804C801E73EC5C00B4FCB3 /* icon_interview_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_interview_unselect@3x.png"; sourceTree = "<group>"; };
+		9A804C811E73EC5C00B4FCB3 /* icon_mine_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_mine_select@3x.png"; sourceTree = "<group>"; };
+		9A804C821E73EC5C00B4FCB3 /* icon_mine_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_mine_unselect@3x.png"; sourceTree = "<group>"; };
+		9A804C831E73EC5C00B4FCB3 /* icon_screening_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_screening_select@3x.png"; sourceTree = "<group>"; };
+		9A804C841E73EC5C00B4FCB3 /* icon_screening_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_screening_unselect@3x.png"; sourceTree = "<group>"; };
+		9A804C8B1E73EC6500B4FCB3 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		9A804C8C1E73EC6500B4FCB3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		9A804C8D1E73EC6500B4FCB3 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		9A804C8E1E73EC6500B4FCB3 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		9A804C8F1E73EC6500B4FCB3 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		9A804C901E73EC6500B4FCB3 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +179,17 @@
 		9A61C96B1E7102C900B10D09 /* SYFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				9A804C7E1E73EC5C00B4FCB3 /* Tabbar */,
 				9A61C96F1E7102C900B10D09 /* AppDelegate.h */,
 				9A61C9701E7102C900B10D09 /* AppDelegate.m */,
 				9A61C9721E7102C900B10D09 /* ViewController.h */,
 				9A61C9731E7102C900B10D09 /* ViewController.m */,
+				9A804C8B1E73EC6500B4FCB3 /* SecondViewController.m */,
+				9A804C8C1E73EC6500B4FCB3 /* SecondViewController.h */,
+				9A804C8D1E73EC6500B4FCB3 /* FirstViewController.m */,
+				9A804C8E1E73EC6500B4FCB3 /* ThirdViewController.h */,
+				9A804C8F1E73EC6500B4FCB3 /* ThirdViewController.m */,
+				9A804C901E73EC6500B4FCB3 /* FirstViewController.h */,
 				9A61C9751E7102C900B10D09 /* Main.storyboard */,
 				9A61C9781E7102C900B10D09 /* Assets.xcassets */,
 				9A61C97A1E7102C900B10D09 /* LaunchScreen.storyboard */,
@@ -295,7 +308,6 @@
 		9A6F59BF1E7278D6002A29FA /* SYTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				9A6F59D91E727F1D002A29FA /* Tabbar */,
 				9A6F59C91E7279D9002A29FA /* SYTabBarController.m */,
 				9A6F59CA1E7279D9002A29FA /* SYTabBarController.h */,
 				9A6F59CC1E727A2E002A29FA /* SYTabBarButtonItem.h */,
@@ -304,25 +316,23 @@
 				9A6F59D01E727A8A002A29FA /* SYTabBarModel.m */,
 				9A6F59D21E727AB2002A29FA /* SYUnReadView.h */,
 				9A6F59D31E727AB2002A29FA /* SYUnReadView.m */,
-				9A6F59C01E72790D002A29FA /* FirstViewController.h */,
-				9A6F59C11E72790D002A29FA /* FirstViewController.m */,
-				9A6F59C31E727921002A29FA /* SecondViewController.h */,
-				9A6F59C41E727921002A29FA /* SecondViewController.m */,
-				9A6F59C61E72792C002A29FA /* ThirdViewController.h */,
-				9A6F59C71E72792C002A29FA /* ThirdViewController.m */,
+				9A804C751E7396F800B4FCB3 /* SYTabBarMaker.h */,
+				9A804C761E7396F800B4FCB3 /* SYTabBarMaker.m */,
+				9A804C7B1E73E74100B4FCB3 /* UIViewController+TabBarHidden.h */,
+				9A804C7C1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m */,
 			);
 			path = SYTabBar;
 			sourceTree = "<group>";
 		};
-		9A6F59D91E727F1D002A29FA /* Tabbar */ = {
+		9A804C7E1E73EC5C00B4FCB3 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				9A6F59DB1E727F1D002A29FA /* icon_interview_select@3x.png */,
-				9A6F59DD1E727F1D002A29FA /* icon_interview_unselect@3x.png */,
-				9A6F59DF1E727F1D002A29FA /* icon_mine_select@3x.png */,
-				9A6F59E11E727F1D002A29FA /* icon_mine_unselect@3x.png */,
-				9A6F59E31E727F1D002A29FA /* icon_screening_select@3x.png */,
-				9A6F59E51E727F1D002A29FA /* icon_screening_unselect@3x.png */,
+				9A804C7F1E73EC5C00B4FCB3 /* icon_interview_select@3x.png */,
+				9A804C801E73EC5C00B4FCB3 /* icon_interview_unselect@3x.png */,
+				9A804C811E73EC5C00B4FCB3 /* icon_mine_select@3x.png */,
+				9A804C821E73EC5C00B4FCB3 /* icon_mine_unselect@3x.png */,
+				9A804C831E73EC5C00B4FCB3 /* icon_screening_select@3x.png */,
+				9A804C841E73EC5C00B4FCB3 /* icon_screening_unselect@3x.png */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -435,20 +445,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A61C9BA1E7127FF00B10D09 /* back_black@3x.png in Resources */,
+				9A804C871E73EC5C00B4FCB3 /* icon_mine_select@3x.png in Resources */,
 				9A61C9DC1E714C2100B10D09 /* 640x1136page2@2x.png in Resources */,
 				9A61C9B91E7127FF00B10D09 /* back_white@3x.png in Resources */,
 				9A61C9DB1E714C2100B10D09 /* 640x1136page1@2x.png in Resources */,
-				9A6F59F11E727F1D002A29FA /* icon_screening_unselect@3x.png in Resources */,
+				9A804C851E73EC5C00B4FCB3 /* icon_interview_select@3x.png in Resources */,
 				9A61C97C1E7102C900B10D09 /* LaunchScreen.storyboard in Resources */,
-				9A6F59E91E727F1D002A29FA /* icon_interview_unselect@3x.png in Resources */,
 				9A61C9791E7102C900B10D09 /* Assets.xcassets in Resources */,
-				9A6F59EF1E727F1D002A29FA /* icon_screening_select@3x.png in Resources */,
-				9A6F59ED1E727F1D002A29FA /* icon_mine_unselect@3x.png in Resources */,
-				9A6F59EB1E727F1D002A29FA /* icon_mine_select@3x.png in Resources */,
 				9A61C9DD1E714C2100B10D09 /* 640x1136page3@2x.png in Resources */,
 				9A61C9DE1E714C2100B10D09 /* btn_image@3x.png in Resources */,
+				9A804C8A1E73EC5C00B4FCB3 /* icon_screening_unselect@3x.png in Resources */,
+				9A804C881E73EC5C00B4FCB3 /* icon_mine_unselect@3x.png in Resources */,
+				9A804C891E73EC5C00B4FCB3 /* icon_screening_select@3x.png in Resources */,
+				9A804C861E73EC5C00B4FCB3 /* icon_interview_unselect@3x.png in Resources */,
 				9A61C9771E7102C900B10D09 /* Main.storyboard in Resources */,
-				9A6F59E71E727F1D002A29FA /* icon_interview_select@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,23 +483,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A804C911E73EC6500B4FCB3 /* SecondViewController.m in Sources */,
 				9A61C9741E7102C900B10D09 /* ViewController.m in Sources */,
-				9A6F59C51E727921002A29FA /* SecondViewController.m in Sources */,
 				9A6F59CE1E727A2E002A29FA /* SYTabBarButtonItem.m in Sources */,
 				9A6F59CB1E7279D9002A29FA /* SYTabBarController.m in Sources */,
+				9A804C921E73EC6500B4FCB3 /* FirstViewController.m in Sources */,
 				9A61C9B41E7121B600B10D09 /* UIViewController+NavigationTool.m in Sources */,
+				9A804C931E73EC6500B4FCB3 /* ThirdViewController.m in Sources */,
 				9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */,
 				9A61C9AD1E7107D900B10D09 /* SYUIBuilder.m in Sources */,
 				9A61C9E11E714C2100B10D09 /* SYGuiViewBuilder.m in Sources */,
-				9A6F59C81E72792C002A29FA /* ThirdViewController.m in Sources */,
+				9A804C7D1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m in Sources */,
 				9A6F59D11E727A8A002A29FA /* SYTabBarModel.m in Sources */,
 				9A61C9A91E71068600B10D09 /* SYAlertBuilder.m in Sources */,
 				9A61C9DF1E714C2100B10D09 /* SYGuideView.m in Sources */,
-				9A6F59C21E72790D002A29FA /* FirstViewController.m in Sources */,
 				9A6F59D41E727AB2002A29FA /* SYUnReadView.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A61C9B31E7121B600B10D09 /* SYNavigationTool.m in Sources */,
 				9A6F59BE1E725869002A29FA /* UIView+SYHelper.m in Sources */,
+				9A804C771E7396F800B4FCB3 /* SYTabBarMaker.m in Sources */,
 				9A61C9E01E714C2100B10D09 /* SYGuideViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

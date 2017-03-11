@@ -16,16 +16,14 @@
 
 @interface ViewController ()
 
-
 @end
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
-    //alert使用
-//    AlertMaker().title(@"这里标题").message(@"这里内容").style(UIAlertControllerStyleAlert).cancelAction(@"取消",UIAlertActionStyleDefault,nil).addAction(@"Action",UIAlertActionStyleDefault,nil).show(self);
     
     //导航栏左右返回键定义
 //    [self addNavigationTitle:@"标题"];
@@ -41,34 +39,23 @@
     //渐变测试
 //    [self.view viewAddAlphaColors:@[[UIColor redColor],[UIColor blueColor]] startPoint:CGPointMake(0.5, 0) endPoint:CGPointMake(0.5, 1.0)];
 
-    [[UIApplication sharedApplication].delegate window].rootViewController = [ViewController returnContentViewController];
+    //tarBar构建
+    [self buildTabBar];
+    
+    
 }
 
 //tarBar构建
-+ (SYTabBarController *)returnContentViewController
+- (void)buildTabBar
 {
-    SYTabBarController *tabBarCtl = [[SYTabBarController alloc]init];
-    
-    // 筛选
-    FirstViewController * screeningCtlr = [[FirstViewController alloc] init];
-    UINavigationController *screeningNav = [[UINavigationController alloc]initWithRootViewController:screeningCtlr];
-    
-    
-    // 面试
-    SecondViewController *interviewCtl = [[SecondViewController alloc] init];
-    UINavigationController *interviewNav = [[UINavigationController alloc]initWithRootViewController:interviewCtl];
-    
-    // 我的
-    ThirdViewController *mineCtl = [[ThirdViewController alloc] init];
-    UINavigationController *mineNav = [[UINavigationController alloc]initWithRootViewController:mineCtl];
-    
-    tabBarCtl.viewControllers = @[screeningNav,interviewNav,mineNav];
-    
-    // 添加自定义Tabbar
-    [tabBarCtl setCustomTabBarCtrlView];
-    
-    return tabBarCtl;
-    
+    NSArray *normalArray = [[NSArray alloc]initWithObjects:@"icon_screening_unselect.png",@"icon_interview_unselect.png",@"icon_mine_unselect.png", nil];
+    NSArray *pressArray = [[NSArray alloc]initWithObjects:@"icon_screening_select.png",@"icon_interview_select.png",@"icon_mine_select.png", nil];
+    NSArray *titleArray = @[@"筛选",@"面试",@"我的"];
+    NSArray *ctrsArray = @[@"FirstViewController",@"SecondViewController",@"ThirdViewController"];
+    for(int i = 0; i < titleArray.count; i ++){
+        TabBar.controllerAndNavigationControllerWithInfo(ctrsArray[i],@"UINavigationController",normalArray[i],pressArray[i],titleArray[i],nil,nil);
+    }
+    TabBar.show();
 }
 
 @end

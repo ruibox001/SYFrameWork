@@ -24,4 +24,8 @@
 //界面的工具类
 #import "UIView+SYHelper.h"
 
+//TabBar模块
+#import "SYTabBarMaker.h"
+#import "UIViewController+TabBarHidden.h"
+
 #endif /* SYUIFrameworkHeader_h */

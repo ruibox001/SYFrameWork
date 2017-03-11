@@ -22,14 +22,14 @@
 @implementation SYAlertBuilder
 
 
-AlertBuild *AlertMaker(){
+AlertBuild *AlertMaker(UIAlertControllerStyle style){
     static  AlertBuild *m = nil;
     if (!m) {
         m = AlertBuild.new;
     }
     if (m) {
         [m.actions removeAllObjects];
-        m.alertStyle = UIAlertControllerStyleActionSheet;
+        m.alertStyle = style;
         m.superController = nil;
         m.alertTitle = nil;
         m.alertMessage = nil;
@@ -63,32 +63,49 @@ AlertBuild *AlertMaker(){
     };
 }
 
-- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)(UIAlertAction *action)))okAction {
-    return ^id(NSString * okBtn,UIAlertActionStyle style,void (^alertClickBlock)(UIAlertAction *action)){
+- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)()))okActionStyle {
+    return ^id(NSString * okBtn,UIAlertActionStyle style,void (^alertClickBlock)()){
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:okBtn style:style handler:alertClickBlock];
         [self.actions addObject:okAction];
         return self;
     };
 }
 
-- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)(UIAlertAction *action)))cancelAction {
-    return ^id(NSString * cancelBtn,UIAlertActionStyle style,void (^alertClickBlock)(UIAlertAction *action)){
+- (AlertBuild *(^)(NSString *,void (^)()))okAction {
+    return ^id(NSString * okBtn,void (^alertClickBlock)()){
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:okBtn style:UIAlertActionStyleDefault handler:alertClickBlock];
+        [self.actions addObject:okAction];
+        return self;
+    };
+}
+
+- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)()))cancelActionStyle {
+    return ^id(NSString * cancelBtn,UIAlertActionStyle style,void (^alertClickBlock)()){
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelBtn style:style handler:alertClickBlock];
         [self.actions addObject:cancelAction];
         return self;
     };
 }
 
-- (AlertBuild *(^)(UIAlertControllerStyle))style {
-    return ^id(UIAlertControllerStyle style){
-        self.alertStyle = style;
+- (AlertBuild *(^)(NSString *,void (^)()))cancelAction {
+    return ^id(NSString * cancelBtn,void (^alertClickBlock)()){
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelBtn style:UIAlertActionStyleDefault handler:alertClickBlock];
+        [self.actions addObject:cancelAction];
         return self;
     };
 }
 
-- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)(UIAlertAction *action)))addAction {
-    return ^id(NSString *title,UIAlertActionStyle style,void (^alertClickBlock)(UIAlertAction *action)){
+- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)()))addActionStyle {
+    return ^id(NSString *title,UIAlertActionStyle style,void (^alertClickBlock)()){
         UIAlertAction *action = [UIAlertAction actionWithTitle:title style:style handler:alertClickBlock];
+        [self.actions addObject:action];
+        return self;
+    };
+}
+
+- (AlertBuild *(^)(NSString *,void (^)()))addAction {
+    return ^id(NSString *title,void (^alertClickBlock)()){
+        UIAlertAction *action = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:alertClickBlock];
         [self.actions addObject:action];
         return self;
     };

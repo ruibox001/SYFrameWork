@@ -11,16 +11,35 @@
 
 typedef void (^alertClickBlock)(UIAlertAction *action);
 
+
+#define NER_READONLY                @property (nonatomic, readonly)
+
+#define NER_PROP(x,y)               NER_READONLY NERChainable##x##y##Block
+#define NER_CHAINABLE_TYPE(v, t)    typedef v *(^NERChainable##v##t##Block)
+
+#define NER_LABEL_PROP(y)           NER_PROP(UILabel, y)
+#define NER_BUTTON_PROP(y)          NER_PROP(UIButton, y)
+
+#define NER_GENERATE_CHAINABLE_TYPES(x) \
+NER_CHAINABLE_TYPE(x, Object)(id);
+
+NER_GENERATE_CHAINABLE_TYPES(UIButton);
+
 #define AlertBuild SYAlertBuilder
+
+#define Alert     AlertMaker(UIAlertControllerStyleAlert)
+#define Sheet     AlertMaker(UIAlertControllerStyleActionSheet)
 
 @interface SYAlertBuilder : NSObject
 
 
+NER_BUTTON_PROP(Object)     str;
+
 /**
- 构建AlertBuilder
+ 构建器
  @return 构建器
  */
-AlertBuild *AlertMaker();
+AlertBuild *AlertMaker(UIAlertControllerStyle style);
 
 /**
  构建最终显示
@@ -44,25 +63,23 @@ AlertBuild *AlertMaker();
  构建okAction
  @return 构建器
  */
-- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)(UIAlertAction *action)))okAction;
+- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)()))okActionStyle;
+- (AlertBuild *(^)(NSString *,void (^)()))okAction;
 
 /**
  构建cancelAction
  @return 构建器
  */
-- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)(UIAlertAction *action)))cancelAction;
+- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)()))cancelActionStyle;
+- (AlertBuild *(^)(NSString *,void (^)()))cancelAction;
 
-/**
- 构建style
- @return 构建器
- */
-- (AlertBuild *(^)(UIAlertControllerStyle))style;
 
 /**
  添加构建的Action
  @return 构建器
  */
-- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)(UIAlertAction *action)))addAction;
+- (AlertBuild *(^)(NSString *,UIAlertActionStyle,void (^)()))addActionStyle;
+- (AlertBuild *(^)(NSString *,void (^)()))addAction;
 
 /**
  调用方式例子

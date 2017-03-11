@@ -7,7 +7,6 @@
 //
 
 #import "ThirdViewController.h"
-#import "SYTabBarController.h"
 
 @interface ThirdViewController ()
 
@@ -18,11 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor redColor];
     
-    SYTabBarController *tarBar = (SYTabBarController *)self.tabBarController;
-    [tarBar setTabBarItemUnReadCount:0 selectedIndex:2];
 }
-
 
 @end

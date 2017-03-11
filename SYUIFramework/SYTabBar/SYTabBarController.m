@@ -8,14 +8,13 @@
 
 #import "SYTabBarController.h"
 #import "SYTabBarButtonItem.h"
-#import "SYTabBarModel.h"
+
 
 #define TABBAR_ITEM_TAG 10059
 #define IPhoneWidth [UIScreen mainScreen].bounds.size.width
 
 @interface SYTabBarController ()
 
-@property (strong, nonatomic) NSMutableArray *tabBarArray;
 @property (strong, nonatomic) UIImageView *tabBarView;
 
 @end
@@ -25,41 +24,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 }
 
-- (NSMutableArray *)tabBarArray {
-    if (!_tabBarArray) {
-        _tabBarArray = [NSMutableArray array];
+- (NSMutableArray *)itemModels {
+    if (!_itemModels) {
+        _itemModels = [NSMutableArray array];
     }
-    return _tabBarArray;
+    return _itemModels;
 }
 
 #pragma mark - 自定义TabBar
-- (void) setCustomTabBarCtrlView
+- (void) customTabBarItemView
 {
-    NSArray *normalArray = [[NSArray alloc]initWithObjects:@"icon_screening_unselect.png",@"icon_interview_unselect.png",@"icon_mine_unselect.png", nil];
-    NSArray *pressArray = [[NSArray alloc]initWithObjects:@"icon_screening_select.png",@"icon_interview_select.png",@"icon_mine_select.png", nil];
-    NSArray *titleArray = @[@"筛选",@"面试",@"我的"];
-
     _tabBarView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,  self.tabBar.frame.size.width,  self.tabBar.frame.size.height)];
     _tabBarView.userInteractionEnabled = YES;
     [_tabBarView setBackgroundColor:[UIColor whiteColor]];
     [self.tabBar addSubview:_tabBarView];
-    
-    for (int i = 0; i < titleArray.count; i++) {
-        SYTabBarModel *info = [[SYTabBarModel alloc]init];
-        info.tarBarImageNormal = [normalArray objectAtIndex:i];
-        info.tarBarImagePress = [pressArray objectAtIndex:i];
-        info.tarBarName = [titleArray objectAtIndex:i];
-        info.tarBarUnReadCount = 0;
-        [self.tabBarArray addObject:info];
-    }
 
-    unsigned long itemCount = self.tabBarArray.count;
-    int itemWidth = IPhoneWidth/itemCount;
-    for (int index = 0; index < itemCount; index++) {
-        SYTabBarButtonItem *button = [[SYTabBarButtonItem alloc]initWithFrame:CGRectMake(index*itemWidth, 0, itemWidth, _tabBarView.frame.size.height) itemInfo:[self.tabBarArray objectAtIndex:index]];
+
+    int itemWidth = IPhoneWidth/self.itemModels.count;
+    for (int index = 0; index < self.itemModels.count; index++) {
+        SYTabBarButtonItem *button = [[SYTabBarButtonItem alloc]initWithFrame:CGRectMake(index*itemWidth, 0, itemWidth, _tabBarView.frame.size.height) itemInfo:[self.itemModels objectAtIndex:index]];
         button.tag = TABBAR_ITEM_TAG + index;
         [button addTarget:self action:@selector(tabBarItemClick:) forControlEvents:UIControlEventTouchUpInside];
         if (index == self.selectedIndex) {
@@ -68,7 +53,6 @@
         [_tabBarView addSubview:button];
         [button reloadData];
     }
-    
     [self.tabBar bringSubviewToFront:_tabBarView];
 }
 
@@ -97,6 +81,9 @@
  */
 - (void) setTabBarItemUnReadCount:(int)count selectedIndex:(NSInteger)selectedIndex
 {
+    if (selectedIndex >= self.itemModels.count) {
+        return;
+    }
     SYTabBarButtonItem *buttonItem = (SYTabBarButtonItem *)[_tabBarView viewWithTag:TABBAR_ITEM_TAG+selectedIndex];
     if (buttonItem) {
         buttonItem.model.tarBarUnReadCount = count;
@@ -110,6 +97,9 @@
  */
 - (void) changeSelectTabBarItem:(NSInteger)selectIndex
 {
+    if (selectIndex >= self.itemModels.count) {
+        return;
+    }
     self.selectedIndex = selectIndex;
     for (id view in _tabBarView.subviews) {
         if ([view isKindOfClass:[SYTabBarButtonItem class]]) {

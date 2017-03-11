@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SYTabBarModel.h"
 
 @interface SYTabBarController : UITabBarController
 
 @property (copy, nonatomic) void (^selectTabBarItemBlock)(NSInteger selectIndex);
 
+@property (strong, nonatomic) NSMutableArray *itemModels;
+
 /** 添加自定义Tabbar */
-- (void) setCustomTabBarCtrlView;
+- (void) customTabBarItemView;
 
 /**
  选中当前tarBar
