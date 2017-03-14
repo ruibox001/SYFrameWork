@@ -7,10 +7,8 @@
 //
 
 #import "UIView+SYBuilder.h"
-#import "SYAlphaMaker.h"
 
 @implementation UIView (SYBuilder)
-
 
 /**
  UIView的边框大小颜色圆角
@@ -54,6 +52,15 @@
 - (SYPropertyUIViewRectBlock)xywhFrame {
     return ^ (SYRect rect) {
         [self setFrame:rect.value];
+        return self;
+    };
+}
+
+- (SYPropertyUIViewObjectBlock)intoView {
+    return ^ (id pView) {
+        if ([pView isKindOfClass:[UIView class]]) {
+            [pView addSubview:self];
+        }
         return self;
     };
 }
@@ -191,6 +198,12 @@
             
             CAGradientLayer *gradientLayer = [CAGradientLayer layer];
             gradientLayer.colors = cgColors;
+//            if (mk.locs && mk.locs.count > 0) {
+//                gradientLayer.locations = mk.locs;
+//            }
+//            else {
+//                gradientLayer.locations = @[@0, @1.0];
+//            }
             gradientLayer.locations = @[@0, @1.0];
             gradientLayer.startPoint = mk.startPoint;
             gradientLayer.endPoint = mk.endPoint;

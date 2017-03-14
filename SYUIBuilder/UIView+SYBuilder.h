@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SYUIBuilderDef.h"
-
-@class SYAlphaMaker;
+#import "SYAlphaMaker.h"
 
 #define View   [UIView new]
 
@@ -34,6 +33,12 @@ SY_UIVIEW_PROP(TargetSel) targetSel;
  @return 链试调用返回
  */
 SY_UIVIEW_PROP(Rect) xywhFrame;
+
+/**
+ UIView把当前界面添加到父控件上
+ @return 链试调用返回
+ */
+SY_UIVIEW_PROP(Object) intoView;
 
 /**
  UIView的origin.x

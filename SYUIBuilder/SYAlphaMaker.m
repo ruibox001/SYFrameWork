@@ -10,7 +10,7 @@
 
 @implementation SYAlphaMaker
 
-AlphaKer *alphader(){
+AlphaKer *alphaBuilder(){
     AlphaKer *a = AlphaKer.new;
     a.alphaColors = NSMutableArray.array;
     return a;
@@ -29,6 +29,15 @@ AlphaKer *alphader(){
     return ^ (NSArray *colors) {
         if (self.alphaColors) {
             [self.alphaColors addObjectsFromArray:colors];
+        }
+        return self;
+    };
+}
+
+- (AlphaKer *(^)(NSArray *))arrayLocs {
+    return ^ (NSArray *locs) {
+        if (locs) {
+            self.locs = [NSMutableArray arrayWithArray:locs];
         }
         return self;
     };

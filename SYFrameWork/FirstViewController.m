@@ -22,9 +22,9 @@
     [self addNavigationLeft:[UIImage imageNamed:@"back_black"] clickBlock:nil];
     [self addNavigationRight:@"协议" clickBlock:nil];
     
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 //    NSLog(@"VVVV: ss");
-//    UIView *v = View;
+
 //    NSLog(@"VVVV: %@",v);
 //    [self.view addSubview:v];
     

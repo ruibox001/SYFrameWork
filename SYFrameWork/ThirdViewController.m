@@ -7,6 +7,7 @@
 //
 
 #import "ThirdViewController.h"
+#import "SYUIBuilderHeader.h"
 
 @interface ThirdViewController ()
 
@@ -17,8 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
+    AlphaKer *mk = alphaBuilder().addColor([UIColor redColor]).addColor([UIColor blueColor]).addStartPoint(CGPointMake(0.5, 1.0)).addEndPoint(CGPointMake(0.5, 0.5));
+    View.xywh(20,100,200,50).targetSel(self,@selector(click)).makerAlpha(mk).intoView(self.view);
+}
+
+- (void)click {
+    NSLog(@"click");
 }
 
 @end
