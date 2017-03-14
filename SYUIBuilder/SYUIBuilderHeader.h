@@ -15,5 +15,8 @@
 #import "UILabel+SYBuilder.h"
 #import "UIImageView+SYBuilder.h"
 #import "UIButton+SYBuilder.h"
+#import "UIFont+SYBuilder.h"
+#import "UIColor+SYBuilder.h"
+#import "SYUtils.h"
 
 #endif /* SYUIBuilderHeader_h */

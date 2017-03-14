@@ -64,4 +64,11 @@
     };
 }
 
+- (SYPropertyUIButtonBoolBlock)selet {
+    return ^id (BOOL selet){
+        [self setSelected:selet];
+        return self;
+    };
+}
+
 @end

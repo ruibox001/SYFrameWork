@@ -22,13 +22,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(40, 100, 240, 60)];
-    view.backgroundColor = [UIColor grayColor];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click)];
-    [view addGestureRecognizer:tap];
-    [self.view addSubview:view];
-    
-    Button.xywh(100,200,200,60).bgColor([UIColor redColor]).intoView(self.view);
+    Button.nTitle(@"sds").btnFont(Fntb(@45)).xywh(100,200,200,60).bgColor(color(@"f04554,0.3")).intoView(self.view).targetSel(self,@selector(click));
     
 }
 

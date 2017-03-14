@@ -49,4 +49,10 @@ SY_UIBUTTON_PROP(Object) btnFont;
  */
 SY_UIBUTTON_PROP(TargetSel) targetAction;
 
+/**
+ UIButton的设置是否select
+ @return 链试调用返回
+ */
+SY_UIBUTTON_PROP(Bool) selet;
+
 @end
