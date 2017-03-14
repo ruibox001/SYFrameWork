@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A61796B1E777AC900B1A11F /* UIImageView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61796A1E777AC900B1A11F /* UIImageView+SYBuilder.m */; };
+		9A61796E1E777BA900B1A11F /* UIView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61796D1E777BA900B1A11F /* UIView+SYBuilder.m */; };
 		9A61C96E1E7102C900B10D09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C96D1E7102C900B10D09 /* main.m */; };
 		9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9701E7102C900B10D09 /* AppDelegate.m */; };
 		9A61C9741E7102C900B10D09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61C9731E7102C900B10D09 /* ViewController.m */; };
@@ -33,6 +35,8 @@
 		9A6F59CE1E727A2E002A29FA /* SYTabBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59CD1E727A2E002A29FA /* SYTabBarButtonItem.m */; };
 		9A6F59D11E727A8A002A29FA /* SYTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59D01E727A8A002A29FA /* SYTabBarModel.m */; };
 		9A6F59D41E727AB2002A29FA /* SYUnReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F59D31E727AB2002A29FA /* SYUnReadView.m */; };
+		9A72BB841E7665BC00ACA23C /* UIButton+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A72BB831E7665BC00ACA23C /* UIButton+SYBuilder.m */; };
+		9A72BB871E7679AC00ACA23C /* UILabel+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A72BB861E7679AC00ACA23C /* UILabel+SYBuilder.m */; };
 		9A804C771E7396F800B4FCB3 /* SYTabBarMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C761E7396F800B4FCB3 /* SYTabBarMaker.m */; };
 		9A804C7D1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A804C7C1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m */; };
 		9A804C851E73EC5C00B4FCB3 /* icon_interview_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A804C7F1E73EC5C00B4FCB3 /* icon_interview_select@3x.png */; };
@@ -64,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A6179691E777AC900B1A11F /* UIImageView+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SYBuilder.h"; sourceTree = "<group>"; };
+		9A61796A1E777AC900B1A11F /* UIImageView+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SYBuilder.m"; sourceTree = "<group>"; };
+		9A61796C1E777BA900B1A11F /* UIView+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYBuilder.h"; sourceTree = "<group>"; };
+		9A61796D1E777BA900B1A11F /* UIView+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYBuilder.m"; sourceTree = "<group>"; };
 		9A61C9691E7102C900B10D09 /* SYFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A61C96D1E7102C900B10D09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A61C96F1E7102C900B10D09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +120,11 @@
 		9A6F59D01E727A8A002A29FA /* SYTabBarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTabBarModel.m; sourceTree = "<group>"; };
 		9A6F59D21E727AB2002A29FA /* SYUnReadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUnReadView.h; sourceTree = "<group>"; };
 		9A6F59D31E727AB2002A29FA /* SYUnReadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUnReadView.m; sourceTree = "<group>"; };
+		9A72BB811E762CB600ACA23C /* SYUIBuilderDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SYUIBuilderDef.h; sourceTree = "<group>"; };
+		9A72BB821E7665BC00ACA23C /* UIButton+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SYBuilder.h"; sourceTree = "<group>"; };
+		9A72BB831E7665BC00ACA23C /* UIButton+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SYBuilder.m"; sourceTree = "<group>"; };
+		9A72BB851E7679AB00ACA23C /* UILabel+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SYBuilder.h"; sourceTree = "<group>"; };
+		9A72BB861E7679AC00ACA23C /* UILabel+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SYBuilder.m"; sourceTree = "<group>"; };
 		9A804C751E7396F800B4FCB3 /* SYTabBarMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTabBarMaker.h; sourceTree = "<group>"; };
 		9A804C761E7396F800B4FCB3 /* SYTabBarMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTabBarMaker.m; sourceTree = "<group>"; };
 		9A804C7B1E73E74100B4FCB3 /* UIViewController+TabBarHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TabBarHidden.h"; sourceTree = "<group>"; };
@@ -253,6 +266,15 @@
 			children = (
 				9A61C9AB1E7107D900B10D09 /* SYUIBuilder.h */,
 				9A61C9AC1E7107D900B10D09 /* SYUIBuilder.m */,
+				9A72BB811E762CB600ACA23C /* SYUIBuilderDef.h */,
+				9A72BB821E7665BC00ACA23C /* UIButton+SYBuilder.h */,
+				9A72BB831E7665BC00ACA23C /* UIButton+SYBuilder.m */,
+				9A72BB851E7679AB00ACA23C /* UILabel+SYBuilder.h */,
+				9A72BB861E7679AC00ACA23C /* UILabel+SYBuilder.m */,
+				9A6179691E777AC900B1A11F /* UIImageView+SYBuilder.h */,
+				9A61796A1E777AC900B1A11F /* UIImageView+SYBuilder.m */,
+				9A61796C1E777BA900B1A11F /* UIView+SYBuilder.h */,
+				9A61796D1E777BA900B1A11F /* UIView+SYBuilder.m */,
 			);
 			path = SYUIBuilder;
 			sourceTree = "<group>";
@@ -483,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A72BB841E7665BC00ACA23C /* UIButton+SYBuilder.m in Sources */,
 				9A804C911E73EC6500B4FCB3 /* SecondViewController.m in Sources */,
 				9A61C9741E7102C900B10D09 /* ViewController.m in Sources */,
 				9A6F59CE1E727A2E002A29FA /* SYTabBarButtonItem.m in Sources */,
@@ -494,10 +517,13 @@
 				9A61C9AD1E7107D900B10D09 /* SYUIBuilder.m in Sources */,
 				9A61C9E11E714C2100B10D09 /* SYGuiViewBuilder.m in Sources */,
 				9A804C7D1E73E74100B4FCB3 /* UIViewController+TabBarHidden.m in Sources */,
+				9A61796E1E777BA900B1A11F /* UIView+SYBuilder.m in Sources */,
 				9A6F59D11E727A8A002A29FA /* SYTabBarModel.m in Sources */,
 				9A61C9A91E71068600B10D09 /* SYAlertBuilder.m in Sources */,
+				9A72BB871E7679AC00ACA23C /* UILabel+SYBuilder.m in Sources */,
 				9A61C9DF1E714C2100B10D09 /* SYGuideView.m in Sources */,
 				9A6F59D41E727AB2002A29FA /* SYUnReadView.m in Sources */,
+				9A61796B1E777AC900B1A11F /* UIImageView+SYBuilder.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A61C9B31E7121B600B10D09 /* SYNavigationTool.m in Sources */,
 				9A6F59BE1E725869002A29FA /* UIView+SYHelper.m in Sources */,

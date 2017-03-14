@@ -12,18 +12,18 @@
 typedef void (^alertClickBlock)(UIAlertAction *action);
 
 
-#define NER_READONLY                @property (nonatomic, readonly)
-
-#define NER_PROP(x,y)               NER_READONLY NERChainable##x##y##Block
-#define NER_CHAINABLE_TYPE(v, t)    typedef v *(^NERChainable##v##t##Block)
-
-#define NER_LABEL_PROP(y)           NER_PROP(UILabel, y)
-#define NER_BUTTON_PROP(y)          NER_PROP(UIButton, y)
-
-#define NER_GENERATE_CHAINABLE_TYPES(x) \
-NER_CHAINABLE_TYPE(x, Object)(id);
-
-NER_GENERATE_CHAINABLE_TYPES(UIButton);
+//#define NER_READONLY                @property (nonatomic, readonly)
+//
+//#define NER_PROP(x,y)               NER_READONLY NERChainable##x##y##Block
+//#define NER_CHAINABLE_TYPE(v, t)    typedef v *(^NERChainable##v##t##Block)
+//
+//#define NER_LABEL_PROP(y)           NER_PROP(UILabel, y)
+//#define NER_BUTTON_PROP(y)          NER_PROP(UIButton, y)
+//
+//#define NER_GENERATE_CHAINABLE_TYPES(x) \
+//NER_CHAINABLE_TYPE(x, Object)(id);
+//
+//NER_GENERATE_CHAINABLE_TYPES(UIButton);
 
 #define AlertBuild SYAlertBuilder
 
@@ -33,7 +33,7 @@ NER_GENERATE_CHAINABLE_TYPES(UIButton);
 @interface SYAlertBuilder : NSObject
 
 
-NER_BUTTON_PROP(Object)     str;
+//NER_BUTTON_PROP(Object)     str;
 
 /**
  构建器

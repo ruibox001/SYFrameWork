@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SYUIFrameworkHeader.h"
+#import "SYUIBuilderDef.h"
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
@@ -15,6 +16,8 @@
 #import "SYTabBarController.h"
 
 @interface ViewController ()
+
+SY_UILABEL_PROP(Empty) str;
 
 @end
 
