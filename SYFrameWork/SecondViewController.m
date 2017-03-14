@@ -9,6 +9,7 @@
 #import "SecondViewController.h"
 #import "SYAlertBuilder.h"
 #import "SYTabBarMaker.h"
+#import "SYUIBuilderHeader.h"
 
 @interface SecondViewController ()
 
@@ -27,6 +28,7 @@
     [view addGestureRecognizer:tap];
     [self.view addSubview:view];
     
+    Button.xywh(100,200,200,60).bgColor([UIColor redColor]).intoView(self.view);
     
 }
 

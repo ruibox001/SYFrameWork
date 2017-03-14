@@ -43,16 +43,16 @@ AlphaKer *alphaBuilder(){
     };
 }
 
-- (AlphaKer *(^)(CGPoint))addStartPoint {
-    return ^ (CGPoint point) {
-        _startPoint = point;
+- (AlphaKer *(^)(SYPoint))addStartPoint {
+    return ^ (SYPoint point) {
+        _sPoint = point.value;
         return self;
     };
 }
 
-- (AlphaKer *(^)(CGPoint))addEndPoint {
-    return ^ (CGPoint point) {
-        _endPoint = point;
+- (AlphaKer *(^)(SYPoint))addEndPoint {
+    return ^ (SYPoint point) {
+        _ePoint = point.value;
         return self;
     };
 }

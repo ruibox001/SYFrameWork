@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SYUIBuilderDef.h"
 
 #define AlphaKer SYAlphaMaker
+
+#define startPoint(...)   addStartPoint((SYPoint){__VA_ARGS__})
+#define endPoint(...)   addEndPoint((SYPoint){__VA_ARGS__})
 
 @interface SYAlphaMaker : NSObject
 
@@ -17,9 +21,9 @@
 
 @property (strong, nonatomic) NSMutableArray *locs;
 
-@property (assign, nonatomic, readonly) CGPoint startPoint;
+@property (assign, nonatomic, readonly) CGPoint sPoint;
 
-@property (assign, nonatomic, readonly) CGPoint endPoint;
+@property (assign, nonatomic, readonly) CGPoint ePoint;
 
 AlphaKer *alphaBuilder();
 
@@ -41,11 +45,11 @@ AlphaKer *alphaBuilder();
 /**
  添加渐变起点
  */
-- (AlphaKer *(^)(CGPoint))addStartPoint;
+- (AlphaKer *(^)(SYPoint))addStartPoint;
 
 /**
  添加结束起点
  */
-- (AlphaKer *(^)(CGPoint))addEndPoint;
+- (AlphaKer *(^)(SYPoint))addEndPoint;
 
 @end

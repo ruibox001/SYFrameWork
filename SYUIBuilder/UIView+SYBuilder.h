@@ -13,6 +13,8 @@
 #define View   [UIView new]
 
 #define xywh(...) xywhFrame((SYRect){__VA_ARGS__})
+#define xy(...)   xyOrigin((SYPoint){__VA_ARGS__})
+#define wh(...)   whSize((SYSize){__VA_ARGS__})
 
 @interface UIView (SYBuilder)
 
@@ -68,13 +70,13 @@ SY_UIVIEW_PROP(Float) h;
  UIView的origin
  @return 链试调用返回
  */
-SY_UIVIEW_PROP(Point) xy;
+SY_UIVIEW_PROP(Point) xyOrigin;
 
 /**
  UIView的size
  @return 链试调用返回
  */
-SY_UIVIEW_PROP(Size) wh;
+SY_UIVIEW_PROP(Size) whSize;
 
 /**
  UIView的缩放X轴

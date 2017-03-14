@@ -121,10 +121,10 @@
  UIView的origin
  @return 链试调用返回
  */
-- (SYPropertyUIViewPointBlock)xy {
-    return ^ (CGPoint xy) {
+- (SYPropertyUIViewPointBlock)xyOrigin {
+    return ^ (SYPoint xy) {
         CGRect frame = self.frame;
-        frame.origin = xy;
+        frame.origin = xy.value;
         [self setFrame:frame];
         return self;
     };
@@ -134,10 +134,10 @@
  UIView的size
  @return 链试调用返回
  */
-- (SYPropertyUIViewSizeBlock)wh {
-    return ^ (CGSize wh) {
+- (SYPropertyUIViewSizeBlock)whSize {
+    return ^ (SYSize wh) {
         CGRect frame = self.frame;
-        frame.size = wh;
+        frame.size = wh.value;
         [self setFrame:frame];
         return self;
     };
@@ -205,8 +205,8 @@
 //                gradientLayer.locations = @[@0, @1.0];
 //            }
             gradientLayer.locations = @[@0, @1.0];
-            gradientLayer.startPoint = mk.startPoint;
-            gradientLayer.endPoint = mk.endPoint;
+            gradientLayer.startPoint = mk.sPoint;
+            gradientLayer.endPoint = mk.ePoint;
             gradientLayer.frame = self.frame;
             [self.layer addSublayer:gradientLayer];
         }

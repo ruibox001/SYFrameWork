@@ -17,6 +17,13 @@ typedef struct SYRect {
     CGRect value;
 } SYRect;
 
+typedef struct SYPoint {
+    CGPoint value;
+} SYPoint;
+
+typedef struct SYSize {
+    CGSize value;
+} SYSize;
 
 /**
  * 定义各个控件的属性链试调用block
@@ -33,8 +40,8 @@ SY_UI_PROP_TYPE(x, ThreeObject)(id, id, id);\
 SY_UI_PROP_TYPE(x, TargetSel)(id, SEL);\
 SY_UI_PROP_TYPE(x, Func)(SEL);\
 SY_UI_PROP_TYPE(x, Float)(CGFloat);\
-SY_UI_PROP_TYPE(x, Point)(CGPoint);\
-SY_UI_PROP_TYPE(x, Size)(CGSize);\
+SY_UI_PROP_TYPE(x, Point)(SYPoint);\
+SY_UI_PROP_TYPE(x, Size)(SYSize);\
 SY_UI_PROP_TYPE(x, CallBack)(id);
 
 SY_GENERATE_PROP_TYPES(UILabel);
