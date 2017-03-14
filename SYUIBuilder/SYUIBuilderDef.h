@@ -25,6 +25,7 @@ typedef struct SYRect {
 #define SY_GENERATE_PROP_TYPES(x) \
 SY_UI_PROP_TYPE(x, Empty)();\
 SY_UI_PROP_TYPE(x, Int)(NSInteger);\
+SY_UI_PROP_TYPE(x, Bool)(BOOL);\
 SY_UI_PROP_TYPE(x, Rect)(SYRect);\
 SY_UI_PROP_TYPE(x, Object)(id);\
 SY_UI_PROP_TYPE(x, TwoObject)(id, id);\

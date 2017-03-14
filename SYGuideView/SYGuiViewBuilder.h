@@ -52,4 +52,10 @@ GuiViewBuilder *guiViewBuilder();
  */
 - (GuiViewBuilder *(^)(NSString *,UIColor *,UIColor *,CGFloat,CGSize,CGFloat,void (^)()))createBtn;
 
+
+//NSArray *imgs = @[@"640x1136page1",@"640x1136page2",@"640x1136page3"];
+//guiViewBuilder().images(imgs).btnBottonOffset(50).createBtn(@"立即体验",[UIColor redColor],[UIColor blackColor],8,CGSizeMake(100, 40),12,^(){
+//    NSLog(@"click");
+//}).addImageName(@"640x1136page2").show();
+
 @end

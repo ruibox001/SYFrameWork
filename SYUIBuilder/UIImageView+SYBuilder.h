@@ -13,8 +13,16 @@
 
 @interface UIImageView (SYBuilder)
 
+/**
+ UIImageView的图片
+ @return 链试调用返回
+ */
 SY_UIIMAGEVIEW_PROP(Object) img;
 
+/**
+ UIImageView的图片模式
+ @return 链试调用返回
+ */
 SY_UIIMAGEVIEW_PROP(Int) mode;
 
 @end

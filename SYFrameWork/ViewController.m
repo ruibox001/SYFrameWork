@@ -1,52 +1,39 @@
 //
 //  ViewController.m
-//  SYFrameWork
+//  SYDemo
 //
-//  Created by 王声远 on 17/3/9.
+//  Created by 王声远 on 17/3/14.
 //  Copyright © 2017年 王声远. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "SYUIFrameworkHeader.h"
-#import "SYUIBuilderDef.h"
+#import "SYTabBarMaker.h"
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
-#import "SYTabBarController.h"
+
+#import "SYGuiViewBuilder.h"
 
 @interface ViewController ()
-
-SY_UILABEL_PROP(Empty) str;
 
 @end
 
 @implementation ViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //导航栏左右返回键定义
-//    [self addNavigationTitle:@"标题"];
-//    [self addNavigationLeft:[UIImage imageNamed:@"back_black"] clickBlock:nil];
-//    [self addNavigationRight:@"协议" clickBlock:nil];
+    self.view.backgroundColor = [UIColor redColor];
     
-    //引导页使用
-//    NSArray *imgs = @[@"640x1136page1",@"640x1136page2",@"640x1136page3"];
-//    guiViewBuilder().images(imgs).btnBottonOffset(50).createBtn(@"立即体验",[UIColor redColor],[UIColor blackColor],8,CGSizeMake(100, 40),12,^(){
-//        NSLog(@"click");
-//    }).addImageName(@"640x1136page2").show();
-    
-    //渐变测试
-//    [self.view viewAddAlphaColors:@[[UIColor redColor],[UIColor blueColor]] startPoint:CGPointMake(0.5, 0) endPoint:CGPointMake(0.5, 1.0)];
-
-    //tarBar构建
-    [self buildTabBar];
-    
+    NSArray *imgs = @[@"640x1136page1",@"640x1136page2",@"640x1136page3"];
+    guiViewBuilder().images(imgs).btnBottonOffset(50).createBtn(@"立即体验",[UIColor redColor],[UIColor blackColor],8,CGSizeMake(100, 40),12,^(){
+        NSLog(@"click");
+        [self buildTabBar];
+    }).addImageName(@"640x1136page2").show();
     
 }
+
 
 //tarBar构建
 - (void)buildTabBar
@@ -60,5 +47,6 @@ SY_UILABEL_PROP(Empty) str;
     }
     TabBar.show();
 }
+
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#import "SYUIFrameworkHeader.h"
+#import "SYNavigationHeader.h"
 
 @interface FirstViewController ()
 
@@ -18,28 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self addNavigationTitle:@"标题"];
+    [self addNavigationLeft:[UIImage imageNamed:@"back_black"] clickBlock:nil];
+    [self addNavigationRight:@"协议" clickBlock:nil];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(40, 100, 300, 60)];
-    view.backgroundColor = [UIColor grayColor];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click)];
-    [view addGestureRecognizer:tap];
-    [self.view addSubview:view];
-
+    self.view.backgroundColor = [UIColor blueColor];
+//    NSLog(@"VVVV: ss");
+//    UIView *v = View;
+//    NSLog(@"VVVV: %@",v);
+//    [self.view addSubview:v];
     
-}
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(40, 100, 300, 60)];
+//    view.backgroundColor = [UIColor grayColor];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click)];
+//    [view addGestureRecognizer:tap];
+//    [self.view addSubview:view];
 
-- (void)click {
-    //alert使用
-    Sheet.title(@"这里标题").message(@"这里内容").cancelAction(@"取消",^(){
-        
-        [self hidenTabBar:YES];
-        
-    }).addAction(@"Action",^(){
-        
-        [self hidenTabBar:NO];
-        
-    }).show(self);
     
 }
 

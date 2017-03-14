@@ -48,19 +48,10 @@
     };
 }
 
--(SYPropertyUIButtonObjectBlock)bgColor {
-    return ^id (id bgColor){
-        if ([bgColor isKindOfClass:[UIColor class]]) {
-            self.backgroundColor = bgColor;
-        }
-        return self;
-    };
-}
-
-- (SYPropertyUIButtonObjectBlock)font {
-    return ^id (id font){
-        if ([font isKindOfClass:[UIFont class]]) {
-            self.titleLabel.font = font;
+- (SYPropertyUIButtonObjectBlock)btnFont {
+    return ^id (id btnFont){
+        if ([btnFont isKindOfClass:[UIFont class]]) {
+            self.titleLabel.font = btnFont;
         }
         return self;
     };

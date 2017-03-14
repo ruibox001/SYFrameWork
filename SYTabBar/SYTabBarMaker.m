@@ -27,7 +27,7 @@ TabBarMaker *tabBarBuilder(){
     static  TabBarMaker *m = nil;
     if (!m) {
         m = TabBarMaker.new;
-        m.tabBarController = [[SYTabBarController alloc]init];
+        m.tabBarController = SYTabBarController.new;
     }
     return m;
 }
@@ -38,11 +38,9 @@ TabBarMaker *tabBarBuilder(){
  */
 - (TabBarMaker *(^)())show {
     return ^id(){
-        
         self.tabBarController.viewControllers = self.navigations;
         [self.tabBarController customTabBarItemView];
         [[[UIApplication sharedApplication].delegate window] setRootViewController:self.tabBarController];
-        
         return self;
     };
 }

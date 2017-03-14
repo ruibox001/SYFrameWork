@@ -10,7 +10,7 @@
 
 @implementation UILabel (SYBuilder)
 
-- (SYPropertyUILabelObjectBlock)text {
+- (SYPropertyUILabelObjectBlock)labelText {
     return ^id (id text) {
         if ([text isKindOfClass:[NSString class]]) {
             self.text = text;
@@ -19,28 +19,19 @@
     };
 }
 
-- (SYPropertyUILabelObjectBlock)font {
-    return ^id (id font) {
-        if ([font isKindOfClass:[UIFont class]]) {
-            self.font = font;
+- (SYPropertyUILabelObjectBlock)labelFont {
+    return ^id (id labelFont) {
+        if ([labelFont isKindOfClass:[UIFont class]]) {
+            self.font = labelFont;
         }
         return self;
     };
 }
 
-- (SYPropertyUILabelObjectBlock)textColor {
-    return ^id (id textColor) {
-        if ([textColor isKindOfClass:[UIColor class]]) {
-            self.textColor = textColor;
-        }
-        return self;
-    };
-}
-
-- (SYPropertyUILabelObjectBlock)bgColor {
-    return ^id (id bgColor) {
-        if ([bgColor isKindOfClass:[UIColor class]]) {
-            self.backgroundColor = bgColor;
+- (SYPropertyUILabelObjectBlock)labelTextColor {
+    return ^id (id labelTextColor) {
+        if ([labelTextColor isKindOfClass:[UIColor class]]) {
+            self.textColor = labelTextColor;
         }
         return self;
     };

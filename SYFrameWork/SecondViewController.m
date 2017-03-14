@@ -7,7 +7,8 @@
 //
 
 #import "SecondViewController.h"
-#import "SYUIFrameworkHeader.h"
+#import "SYAlertBuilder.h"
+#import "SYTabBarMaker.h"
 
 @interface SecondViewController ()
 
@@ -20,7 +21,7 @@
     
     self.view.backgroundColor = [UIColor blueColor];
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(40, 100, 300, 60)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(40, 100, 240, 60)];
     view.backgroundColor = [UIColor grayColor];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(click)];
     [view addGestureRecognizer:tap];
@@ -42,6 +43,5 @@
     }).show(self);
     
 }
-
 
 @end

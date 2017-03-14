@@ -13,18 +13,40 @@
 
 @interface UIButton (SYBuilder)
 
+/**
+ UIButton的普通状态文本
+ @return 链试调用返回
+ */
 SY_UIBUTTON_PROP(Object) nTitle;
 
+/**
+ UIButton的选中状态文本
+ @return 链试调用返回
+ */
 SY_UIBUTTON_PROP(Object) sTitle;
 
+/**
+ UIButton的普通状态文本颜色
+ @return 链试调用返回
+ */
 SY_UIBUTTON_PROP(Object) nTitleColor;
 
+/**
+ UIButton的选中状态文本颜色
+ @return 链试调用返回
+ */
 SY_UIBUTTON_PROP(Object) sTitleColor;
 
-SY_UIBUTTON_PROP(Object) bgColor;
+/**
+ UIButton的文本大小
+ @return 链试调用返回
+ */
+SY_UIBUTTON_PROP(Object) btnFont;
 
-SY_UIBUTTON_PROP(Object) font;
-
+/**
+ UIButton的点击事件
+ @return 链试调用返回
+ */
 SY_UIBUTTON_PROP(TargetSel) targetAction;
 
 @end
