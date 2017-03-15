@@ -198,16 +198,15 @@
             
             CAGradientLayer *gradientLayer = [CAGradientLayer layer];
             gradientLayer.colors = cgColors;
-//            if (mk.locs && mk.locs.count > 0) {
-//                gradientLayer.locations = mk.locs;
-//            }
-//            else {
-//                gradientLayer.locations = @[@0, @1.0];
-//            }
-            gradientLayer.locations = @[@0, @1.0];
+            if (mk.locs && mk.locs.count > 0) {
+                gradientLayer.locations = mk.locs;
+            }
+            else {
+                gradientLayer.locations = @[@0, @1.0];
+            }
             gradientLayer.startPoint = mk.sPoint;
             gradientLayer.endPoint = mk.ePoint;
-            gradientLayer.frame = self.frame;
+            gradientLayer.frame = self.bounds;
             [self.layer addSublayer:gradientLayer];
         }
         return self;
@@ -239,6 +238,31 @@
     UIView *snapshot = [[UIImageView alloc] initWithImage:image];
     snapshot.backgroundColor = [UIColor whiteColor];
     return snapshot;
+}
+
+/**
+ 给界面添加渐变颜色
+ @param alphaColors 渐变颜色数组
+ @param startPoint 开始点0-1
+ @param endPoint 结束点0-1
+ */
+- (void)viewAddAlphaColors:(NSArray *)alphaColors startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint{
+    NSMutableArray *cgColors = [NSMutableArray array];
+    for (UIColor *color in alphaColors) {
+        NSAssert([color isKindOfClass:[UIColor class]],@"alphaColors必须为颜色数据");
+        [cgColors addObject:(__bridge id)color.CGColor];
+    }
+    if (cgColors.count == 0) {
+        return;
+    }
+    
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors = cgColors;
+    gradientLayer.locations = @[@0, @1.0];
+    gradientLayer.startPoint = startPoint;
+    gradientLayer.endPoint = endPoint;
+    gradientLayer.frame = self.frame;
+    [self.layer addSublayer:gradientLayer];
 }
 
 @end
