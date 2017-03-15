@@ -6,6 +6,7 @@
 // 
 
 #import <UIKit/UIKit.h>
+#import "UIView+SYBuilder.h"
 
 typedef NS_ENUM(NSInteger, ScrollImageIndicatorStyle) {
     ScrollImageIndicatorStyleDot     = 0,

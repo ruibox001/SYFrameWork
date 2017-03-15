@@ -101,19 +101,12 @@ SYScrollImageView *scrollImage(BOOL limit) {
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
-    if (self.style == ScrollImageIndicatorStyleDot) {
-        
-    }
-    else {
-        
-    }
     [self setUrls:self.urlArray];
 }
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:self.frame];
+        _scrollView = [[UIScrollView alloc] init];
         [self addSubview:_scrollView];
         _scrollView.pagingEnabled = YES;
         _scrollView.backgroundColor = [UIColor clearColor];
@@ -129,6 +122,7 @@ SYScrollImageView *scrollImage(BOOL limit) {
         [self addSubview:_pageControl];
         [self bringSubviewToFront:self.pageControl];
         _pageControl.backgroundColor = [UIColor clearColor];
+        _pageControl.hidesForSinglePage=YES;
         _pageControl.currentPage = 0;
     }
     return _pageControl;
@@ -150,11 +144,6 @@ SYScrollImageView *scrollImage(BOOL limit) {
     self.pageControl.numberOfPages = imageCount;
     self.pageControl.currentPageIndicatorTintColor = self.pageCurrentColor;
     self.pageControl.pageIndicatorTintColor = self.pageNormalColor;
-    
-    for (UIImageView *imageView in self.imageArray) {
-        [imageView removeFromSuperview];
-    }
-    [self.imageArray removeAllObjects];
     
     for (int i = 0; i < imageCount; i ++)
     {
@@ -185,10 +174,9 @@ SYScrollImageView *scrollImage(BOOL limit) {
     CGFloat height = self.frame.size.height;
     CGFloat width = self.frame.size.width;
     
-    CGRect rect = CGRectMake(0, 0, width, height);
-    [self.scrollView setFrame:rect];
+    [self.scrollView setFrame:self.bounds];
     [self.pageControl setFrame:CGRectMake(0, height - 20, width, 20)];
-    if (self.style == ScrollImageIndicatorStyleLine && !self.indicator) {
+    if (self.style == ScrollImageIndicatorStyleLine && !self.indicator && urls.count > 1) {
         self.indicator = [STKFinancialScrollIndicator shareWithFrame:CGRectMake(0, height-5, width, 2) numberOfLine:urls.count lineColor:self.pageNormalColor];
         [self addSubview:self.indicator];
         self.pageControl.hidden = YES;
@@ -202,13 +190,14 @@ SYScrollImageView *scrollImage(BOOL limit) {
     for (NSInteger i = 0; i < imageCount; i ++)
     {
         UIImageView * imageView = self.imageArray[i];
-        [imageView setFrame:CGRectMake(i*width, CGRectGetMinY(self.scrollView.frame), width, height)];
+        [imageView setFrame:CGRectMake(i*width, 0, width, height)];
         [self.scrollView addSubview:imageView];
     }
     if (!self.limit) {
         [self.scrollView setContentOffset:CGPointMake(width, 0)];
     }
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.scrollSeconds target:self selector:@selector(timeUpChangeScrollView) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 #pragma mark - 时间到时调用方法，重新刷新ScrollView的contentOffset
@@ -309,6 +298,7 @@ SYScrollImageView *scrollImage(BOOL limit) {
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.scrollSeconds target:self selector:@selector(timeUpChangeScrollView) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 /**
