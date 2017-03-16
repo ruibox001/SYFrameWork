@@ -1,22 +1,26 @@
 //
 //  SYScrollImageView.m
+//  SYFrameWork
 //
-//  Created by 王声远 on 15/5/8.
-//  Copyright (c) 2015年 王声远. All rights reserved.
+//  Created by 王声远 on 17/3/9.
+//  Copyright © 2017年 王声远. All rights reserved.
 //
 
 #import "SYScrollImageView.h"
-#import "UIImageView+WebCache.h"
-#import "STKFinancialScrollIndicator.h"
+#import "ScrollLineIndicator.h"
+#import "ScrollDotIndicator.h"
+
+
+typedef void (^scrollImageClick)(NSInteger index);
+typedef void (^loadImageBlock)(UIImageView *imageView, NSString *url);
 
 @interface SYScrollImageView() <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIScrollView *scrollView;
-@property (nonatomic,strong) UIPageControl *pageControl;
-@property (nonatomic,strong) STKFinancialScrollIndicator *indicator;
+@property (nonatomic,strong) ScrollDotIndicator *dotIndicator;
+@property (nonatomic,strong) ScrollLineIndicator *lineIndicator;
 @property (nonatomic,strong) NSTimer *timer;
 
-//存放要循环显示的ScrollView的图片的名称
 @property (nonatomic,strong) NSMutableArray *imageArray;
 
 @property (nonatomic,strong) UIColor *pageNormalColor;
@@ -33,9 +37,15 @@
 @property (nonatomic,copy) scrollImageClick clickBloc;
 @property (nonatomic,copy) scrollImageClick scrollBloc;
 
+@property (nonatomic,assign) CGFloat scrollIndicatorOffset;
+
+@property (nonatomic,copy) loadImageBlock loadImageBloc;
+
 @end
 
 @implementation SYScrollImageView
+
+static dispatch_queue_t _loggingQueue;
 
 SYScrollImageView *scrollImage(BOOL limit) {
     SYScrollImageView *s = SYScrollImageView.alloc.init;
@@ -43,9 +53,30 @@ SYScrollImageView *scrollImage(BOOL limit) {
     return s;
 }
 
-- (SYScrollImageView *(^)(CGFloat))seconds {
+- (SYScrollImageView *(^)(CGFloat))second {
     return ^(CGFloat sec){
         self.scrollSeconds = sec;
+        return self;
+    };
+}
+
+- (SYScrollImageView *(^)(CGRect))srollFrame {
+    return ^(CGRect frame){
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (SYScrollImageView *(^)(void (^)(UIImageView *imageView, NSString *url)))loadImageWithUrl {
+    return ^(loadImageBlock block) {
+        self.loadImageBloc = block;
+        return self;
+    };
+}
+
+- (SYScrollImageView *(^)(CGFloat))indicatorOffset {
+    return ^(CGFloat indicatorOffset){
+        self.scrollIndicatorOffset = indicatorOffset;
         return self;
     };
 }
@@ -85,6 +116,13 @@ SYScrollImageView *scrollImage(BOOL limit) {
     };
 }
 
+- (SYScrollImageView *(^)(NSString *))addImageName{
+    return ^(NSString *imageName){
+        [self.urlArray addObject:imageName];
+        return self;
+    };
+}
+
 - (SYScrollImageView *(^)(void (^)(NSInteger index)))click {
     return ^(void (^block)(NSInteger index)){
         self.clickBloc = block;
@@ -106,32 +144,40 @@ SYScrollImageView *scrollImage(BOOL limit) {
 
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
-        _scrollView = [[UIScrollView alloc] init];
-        [self addSubview:_scrollView];
+        _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _scrollView.pagingEnabled = YES;
         _scrollView.backgroundColor = [UIColor clearColor];
-        [_scrollView setShowsHorizontalScrollIndicator:NO];
         _scrollView.delegate = self;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        [self addSubview:_scrollView];
     }
     return _scrollView;
 }
 
-- (UIPageControl *)pageControl {
-    if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] init];
-        [self addSubview:_pageControl];
-        [self bringSubviewToFront:self.pageControl];
-        _pageControl.backgroundColor = [UIColor clearColor];
-        _pageControl.hidesForSinglePage=YES;
-        _pageControl.currentPage = 0;
+- (ScrollDotIndicator *)dotIndicator {
+    if (!_dotIndicator) {
+        _dotIndicator = [ScrollDotIndicator shareWithDotIndicatorWithFrame:CGRectMake(0, self.frame.size.height-10+self.scrollIndicatorOffset, self.frame.size.width, 2) numberOfPages:self.urlArray.count normalColor:self.pageNormalColor cColor:self.pageCurrentColor];
+        [self addSubview:_dotIndicator];
     }
-    return _pageControl;
+    return _dotIndicator;
+}
+
+- (ScrollLineIndicator *)lineIndicator {
+    if (!_lineIndicator) {
+        _lineIndicator = [ScrollLineIndicator shareWithFrame:CGRectMake(0, self.frame.size.height-5+self.scrollIndicatorOffset, self.frame.size.width, 2) numberOfLine:self.urlArray.count lineColor:self.pageNormalColor selectColor:self.pageCurrentColor];
+        [self addSubview:_lineIndicator];
+    }
+    return _lineIndicator;
 }
 
 -(void) setUrls:(NSArray *)urls
 {
+    
+    NSLog(@"frame: %@",NSStringFromCGRect(self.frame));
     [self.timer invalidate];
     self.timer = nil;
+    
     
     NSInteger imageCount = urls.count;
     if (imageCount == 0) {
@@ -141,18 +187,18 @@ SYScrollImageView *scrollImage(BOOL limit) {
         return;
     }
     
-    self.pageControl.numberOfPages = imageCount;
-    self.pageControl.currentPageIndicatorTintColor = self.pageCurrentColor;
-    self.pageControl.pageIndicatorTintColor = self.pageNormalColor;
+    for (UIImageView *imgView in self.imageArray) {
+        [imgView removeFromSuperview];
+    }
+    [self.imageArray removeAllObjects];
     
     for (int i = 0; i < imageCount; i ++)
     {
         NSString *item = urls[i];
-        UIImageView *imageView = [[UIImageView alloc] init];
+        UIImageView *imageView = [UIImageView new];
         imageView.tag = i;
         [self setImageFromURL:item imgView:imageView];
         [self.imageArray addObject:imageView];
-        [self view:imageView addClickWithTarget:self sel:@selector(clickImgView:)];
     }
     
     if (!self.limit) {
@@ -161,43 +207,36 @@ SYScrollImageView *scrollImage(BOOL limit) {
         [self setImageFromURL:item imgView:lastImageView];
         [self.imageArray insertObject:lastImageView atIndex:0];
         lastImageView.tag = imageCount - 1;
-        [self view:lastImageView addClickWithTarget:self sel:@selector(clickImgView:)];
         
         NSString *item1 = urls[0];
         UIImageView *firstImageView = [[UIImageView alloc] init];
         [self setImageFromURL:item1 imgView:firstImageView];
         [self.imageArray addObject:firstImageView];
         firstImageView.tag = 0;
-        [self view:firstImageView addClickWithTarget:self sel:@selector(clickImgView:)];
     }
     
     CGFloat height = self.frame.size.height;
     CGFloat width = self.frame.size.width;
     
-    [self.scrollView setFrame:self.bounds];
-    [self.pageControl setFrame:CGRectMake(0, height - 20, width, 20)];
-    if (self.style == ScrollImageIndicatorStyleLine && !self.indicator && urls.count > 1) {
-        self.indicator = [STKFinancialScrollIndicator shareWithFrame:CGRectMake(0, height-5, width, 2) numberOfLine:urls.count lineColor:self.pageNormalColor];
-        [self addSubview:self.indicator];
-        self.pageControl.hidden = YES;
-    }
-
     
-    imageCount = self.imageArray.count;
-    width = self.scrollView.bounds.size.width;
-    height = self.scrollView.bounds.size.height;
-    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * (imageCount), 0)];
-    for (NSInteger i = 0; i < imageCount; i ++)
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * (self.imageArray.count), 0)];
+    if (self.style == ScrollImageIndicatorStyleLine) {
+        [self.lineIndicator drawSelectLineOfNumber:0];
+    }
+    else {
+        [self.dotIndicator setPageIndex:0];
+    }
+    for (NSInteger i = 0; i < self.imageArray.count; i ++)
     {
         UIImageView * imageView = self.imageArray[i];
         [imageView setFrame:CGRectMake(i*width, 0, width, height)];
         [self.scrollView addSubview:imageView];
+        [self view:imageView addClickWithTarget:self sel:@selector(clickImgView:)];
     }
     if (!self.limit) {
         [self.scrollView setContentOffset:CGPointMake(width, 0)];
     }
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.scrollSeconds target:self selector:@selector(timeUpChangeScrollView) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 #pragma mark - 时间到时调用方法，重新刷新ScrollView的contentOffset
@@ -213,19 +252,15 @@ SYScrollImageView *scrollImage(BOOL limit) {
             page = 0;
         }
         [self.scrollView setContentOffset:CGPointMake(page * scrollW, 0) animated:YES];
-        
-        self.pageControl.currentPage = page;
+
         [self setCurrentPageIndex:page];
-        if (self.scrollBloc) {
-            self.scrollBloc(page);
-        }
     }
     else {
         NSInteger imageCount = self.imageArray.count - 2;
         CGFloat scrollW = self.scrollView.frame.size.width;
         NSInteger page = self.scrollView.contentOffset.x / scrollW;
         page += 1;
-        
+
         if (page == 0 || page == (imageCount + 1))
         {
             if (page == 0) {
@@ -240,15 +275,11 @@ SYScrollImageView *scrollImage(BOOL limit) {
         
         [self.scrollView setContentOffset:CGPointMake(page * scrollW, 0) animated:YES];
         
-        self.pageControl.currentPage = page - 1;
         [self setCurrentPageIndex:(page-1)];
-        if (self.scrollBloc) {
-            self.scrollBloc(page-1);
-        }
     }
 }
 
-#pragma mark - 拖拉ScrollView结束时重新刷新pageControl
+#pragma mark - 拖拉ScrollView结束时重新刷新
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     if (self.limit) {
@@ -257,11 +288,7 @@ SYScrollImageView *scrollImage(BOOL limit) {
 
         [self.scrollView setContentOffset:CGPointMake(page * scrollW, 0)];
         
-        self.pageControl.currentPage = page;
         [self setCurrentPageIndex:page];
-        if (self.scrollBloc) {
-            self.scrollBloc(page);
-        }
     }
     else {
         NSInteger imageCount = self.imageArray.count - 2;
@@ -279,11 +306,8 @@ SYScrollImageView *scrollImage(BOOL limit) {
             
             [self.scrollView setContentOffset:CGPointMake(page * scrollW, 0)];
         }
-        self.pageControl.currentPage = page - 1;
+
         [self setCurrentPageIndex:(page-1)];
-        if (self.scrollBloc) {
-            self.scrollBloc(page-1);
-        }
     }
 }
 
@@ -298,7 +322,6 @@ SYScrollImageView *scrollImage(BOOL limit) {
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:self.scrollSeconds target:self selector:@selector(timeUpChangeScrollView) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 /**
@@ -312,13 +335,33 @@ SYScrollImageView *scrollImage(BOOL limit) {
     }
 }
 
--(void) setImageFromURL:(NSString *)fileURL imgView:(UIImageView *)imgView {
-    if (![fileURL hasPrefix:@"http"]) {
-        [imgView setImage:[UIImage imageNamed:fileURL]];
+-(void) setImageFromURL:(NSString *)url imgView:(UIImageView *)imgView {
+    if (![url hasPrefix:@"http"]) {
+        [imgView setImage:[UIImage imageNamed:url]];
     }
     else {
-        [imgView sd_setImageWithURL:[NSURL URLWithString:fileURL]];
+        if (self.loadImageBloc) {
+            self.loadImageBloc(imgView,url);
+        }
+        else {
+            if (!_loggingQueue) {
+                _loggingQueue = dispatch_queue_create("sf.scroll.image", DISPATCH_QUEUE_SERIAL);
+            }
+            dispatch_block_t block = ^{
+                @autoreleasepool {
+                    [self downLoadImageWithImageView:imgView url:url];
+                }
+            };
+            dispatch_async(_loggingQueue, block);
+        }
     }
+}
+
+- (void)downLoadImageWithImageView:(UIImageView *)imageView url:(NSString *)url {
+    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        imageView.image = img;
+    });
 }
 
 - (void)view:(UIView *)view addClickWithTarget:(id)target sel:(SEL)sec {
@@ -364,11 +407,18 @@ SYScrollImageView *scrollImage(BOOL limit) {
 }
 
 - (void)setCurrentPageIndex:(NSInteger)page {
-    if (!self.pageControl.hidden) {
-        [self bringSubviewToFront:self.pageControl];
+    if (self.style == ScrollImageIndicatorStyleLine) {
+        if (self.lineIndicator) {
+            [self.lineIndicator drawSelectLineOfNumber:page];
+        }
     }
-    if (self.indicator) {
-        [self.indicator drawSelectLineOfNumber:page];
+    else {
+        if (self.dotIndicator) {
+            [self.dotIndicator setPageIndex:page];
+        }
+    }
+    if (self.scrollBloc) {
+        self.scrollBloc(page);
     }
 }
 

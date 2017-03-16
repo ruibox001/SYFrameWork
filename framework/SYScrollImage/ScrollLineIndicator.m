@@ -1,14 +1,14 @@
 //
-//  STKFinancialScrollIndicator.m
-//  Tronker
+//  ScrollLineIndicator.m
+//  SYFrameWork
 //
-//  Created by 王声远 on 17/2/25.
-//  Copyright © 2017年 Shenzhen Soffice Software. All rights reserved.
+//  Created by 王声远 on 17/3/16.
+//  Copyright © 2017年 王声远. All rights reserved.
 //
 
-#import "STKFinancialScrollIndicator.h"
+#import "ScrollLineIndicator.h"
 
-@interface STKFinancialScrollIndicator()
+@interface ScrollLineIndicator()
 
 @property (nonatomic,strong) CALayer *myLayer;
 @property (nonatomic,weak) UIView *lineView;
@@ -17,21 +17,23 @@
 @property (nonatomic,assign) NSInteger lineNumber;
 @property (nonatomic,assign) CGFloat lineLength;
 @property (nonatomic,assign) CGFloat lineSpace;
+@property (nonatomic,strong) UIColor *selectColor;
 
 @end
 
-@implementation STKFinancialScrollIndicator
+@implementation ScrollLineIndicator
 
-+ (instancetype)shareWithFrame:(CGRect)frame numberOfLine:(NSInteger)numberLines lineColor:(UIColor *)color{
-    return [[super alloc] initWithWithFrame:frame numberOfLine:numberLines lineColor:color];
++ (instancetype)shareWithFrame:(CGRect)frame numberOfLine:(NSInteger)numberLines lineColor:(UIColor *)color selectColor:(UIColor *)sColor{
+    return [[super alloc] initWithWithFrame:frame numberOfLine:numberLines lineColor:color selectColor:sColor];
 }
 
-- (instancetype)initWithWithFrame:(CGRect)frame numberOfLine:(NSInteger)lineNumber lineColor:(UIColor *)color
+- (instancetype)initWithWithFrame:(CGRect)frame numberOfLine:(NSInteger)lineNumber lineColor:(UIColor *)color selectColor:(UIColor *)sColor
 {
     self = [super initWithFrame:frame];
     if (self) {
         
         self.backgroundColor  = [UIColor clearColor];
+        self.selectColor = sColor;
         
         CGFloat lineH = 2;
         self.lineLength = 16;
@@ -114,7 +116,7 @@
     [shapeLayer setPosition:CGPointMake(CGRectGetWidth(sView.frame) / 2, CGRectGetHeight(sView.frame))];
     [shapeLayer setFillColor:[UIColor clearColor].CGColor];
     //  设置虚线颜色为blackColor
-    [shapeLayer setStrokeColor:[UIColor whiteColor].CGColor];
+    [shapeLayer setStrokeColor:self.selectColor.CGColor];
     //  设置虚线宽度
     [shapeLayer setLineWidth:CGRectGetHeight(sView.frame)];
     [shapeLayer setLineJoin:kCALineJoinRound];
@@ -128,6 +130,13 @@
     CGPathRelease(path);
     //  把绘制好的虚线添加上来
     [sView.layer addSublayer:shapeLayer];
+}
+
+- (UIColor *)selectColor {
+    if (!_selectColor) {
+        _selectColor = [UIColor whiteColor];
+    }
+    return _selectColor;
 }
 
 @end
