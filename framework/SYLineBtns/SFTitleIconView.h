@@ -13,5 +13,6 @@
 
 - (SFTitleIconView *(^)(NSString *, NSString *))addTitleIcon;
 - (SFTitleIconView *(^)(void (^)(NSInteger index)))click;
+- (SFTitleIconView *(^)(CGFloat))offsetX;
 
 @end

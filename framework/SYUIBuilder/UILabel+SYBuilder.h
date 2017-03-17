@@ -37,4 +37,10 @@ SY_UILABEL_PROP(Object) labelTextColor;
  */
 SY_UILABEL_PROP(Int) alignment;
 
+/**
+ UILabel添加富文本字符串
+ @return 链试调用返回
+ */
+SY_UILABEL_PROP(Object) mutableAttibuteString;
+
 @end

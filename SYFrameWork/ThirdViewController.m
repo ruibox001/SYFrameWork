@@ -27,7 +27,7 @@
     
     lineBtnBuilder.addTitleIcon(@"文字",@"icon_financial_share").addTitleIcon(@"文字1",@"icon_financial_share").addTitleIcon(@"文字1",@"icon_financial_share").click(^(NSInteger index){
         NSLog(@"click > %ld",index);
-    }).intoView(self.view).xywh(100,400,200,86).bgColor(rgb(0xdddd11)).borderWidthRadius(rgb(0xd36251),@1,@5);
+    }).offsetX(20).intoView(self.view).xywh(100,400,200,86).bgColor(rgb(0xdddd11)).borderWidthRadius(rgb(0xd36251),@1,@5);
 }
 
 - (void)click {

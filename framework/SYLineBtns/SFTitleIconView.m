@@ -15,6 +15,7 @@
 @property (nonatomic,strong) UIFont *titleFont;
 @property (copy, nonatomic) void (^LineBtnClickBlock)(NSInteger index);
 @property (nonatomic,strong) NSMutableArray *datas;
+@property (nonatomic,assign) CGFloat offset;
 
 @end
 
@@ -34,9 +35,9 @@
         }
         
         SFTitleIconModel *model = obj;
-        CGFloat btnW = frame.size.width/datas.count;
+        CGFloat btnW = (frame.size.width - self.offset*2)/datas.count;
         CGFloat btnH = frame.size.height;
-        CGRect btnFrame = CGRectMake(i*btnW, 0, btnW, btnH);
+        CGRect btnFrame = CGRectMake(i*btnW+self.offset, 0, btnW, btnH);
         
         UIImage *img = [UIImage imageNamed:model.icon];
         CGFloat imgHW = img.size.width;
@@ -76,6 +77,13 @@
 - (SFTitleIconView *(^)(void (^)(NSInteger index)))click {
     return ^ (void (^lineBtnClickBlock)(NSInteger index)) {
         self.LineBtnClickBlock = lineBtnClickBlock;
+        return self;
+    };
+}
+
+- (SFTitleIconView *(^)(CGFloat))offsetX {
+    return ^ (CGFloat offset) {
+        self.offset = offset;
         return self;
     };
 }

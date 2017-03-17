@@ -60,6 +60,8 @@
 		9A65B9171E7A6E9F002401B9 /* UITableView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8EB1E7A6E9F002401B9 /* UITableView+SYBuilder.m */; };
 		9A65B9181E7A6E9F002401B9 /* UITextField+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8ED1E7A6E9F002401B9 /* UITextField+SYBuilder.m */; };
 		9A65B9191E7A6E9F002401B9 /* UIView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8EF1E7A6E9F002401B9 /* UIView+SYBuilder.m */; };
+		9A65B9271E7A9937002401B9 /* NSMutableAttributedString+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B9241E7A9937002401B9 /* NSMutableAttributedString+SF.m */; };
+		9A65B9281E7A9937002401B9 /* NSString+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B9261E7A9937002401B9 /* NSString+SF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +178,10 @@
 		9A65B8ED1E7A6E9F002401B9 /* UITextField+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SYBuilder.m"; sourceTree = "<group>"; };
 		9A65B8EE1E7A6E9F002401B9 /* UIView+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYBuilder.h"; sourceTree = "<group>"; };
 		9A65B8EF1E7A6E9F002401B9 /* UIView+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYBuilder.m"; sourceTree = "<group>"; };
+		9A65B9231E7A9937002401B9 /* NSMutableAttributedString+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SF.h"; sourceTree = "<group>"; };
+		9A65B9241E7A9937002401B9 /* NSMutableAttributedString+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SF.m"; sourceTree = "<group>"; };
+		9A65B9251E7A9937002401B9 /* NSString+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SF.h"; sourceTree = "<group>"; };
+		9A65B9261E7A9937002401B9 /* NSString+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +427,10 @@
 				9A65B8ED1E7A6E9F002401B9 /* UITextField+SYBuilder.m */,
 				9A65B8EE1E7A6E9F002401B9 /* UIView+SYBuilder.h */,
 				9A65B8EF1E7A6E9F002401B9 /* UIView+SYBuilder.m */,
+				9A65B9231E7A9937002401B9 /* NSMutableAttributedString+SF.h */,
+				9A65B9241E7A9937002401B9 /* NSMutableAttributedString+SF.m */,
+				9A65B9251E7A9937002401B9 /* NSString+SF.h */,
+				9A65B9261E7A9937002401B9 /* NSString+SF.m */,
 			);
 			path = SYUIBuilder;
 			sourceTree = "<group>";
@@ -588,9 +598,11 @@
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A65B8FF1E7A6E9F002401B9 /* SYNavigationTool.m in Sources */,
 				9A65B9001E7A6E9F002401B9 /* UIViewController+NavigationTool.m in Sources */,
+				9A65B9281E7A9937002401B9 /* NSString+SF.m in Sources */,
 				9A65B9191E7A6E9F002401B9 /* UIView+SYBuilder.m in Sources */,
 				9A65B9051E7A6E9F002401B9 /* SYTabBarController.m in Sources */,
 				9A65B9011E7A6E9F002401B9 /* ScrollDotIndicator.m in Sources */,
+				9A65B9271E7A9937002401B9 /* NSMutableAttributedString+SF.m in Sources */,
 				9A65B9021E7A6E9F002401B9 /* ScrollLineIndicator.m in Sources */,
 				9A65B8F71E7A6E9F002401B9 /* SYGuiViewBuilder.m in Sources */,
 				9A617A471E77CF8C00B1A11F /* ViewController.m in Sources */,

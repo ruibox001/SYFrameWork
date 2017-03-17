@@ -44,4 +44,14 @@
     };
 }
 
+- (SYPropertyUILabelObjectBlock)mutableAttibuteString {
+    return ^id (id mutableAttibuteString) {
+        if ([mutableAttibuteString isKindOfClass:[NSMutableAttributedString class]]) {
+            self.attributedText = mutableAttibuteString;
+            [self sizeToFit];
+        }
+        return self;
+    };
+}
+
 @end
