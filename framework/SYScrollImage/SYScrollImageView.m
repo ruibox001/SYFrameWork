@@ -231,6 +231,7 @@ SYScrollImageView *scrollImage(BOOL limit) {
         UIImageView * imageView = self.imageArray[i];
         [imageView setFrame:CGRectMake(i*width, 0, width, height)];
         [self.scrollView addSubview:imageView];
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self view:imageView addClickWithTarget:self sel:@selector(clickImgView:)];
     }
     if (!self.limit) {

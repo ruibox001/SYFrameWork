@@ -50,18 +50,8 @@
 		9A65B90D1E7A6E9F002401B9 /* icon_screening_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A65B8D51E7A6E9F002401B9 /* icon_screening_select@3x.png */; };
 		9A65B90E1E7A6E9F002401B9 /* icon_screening_unselect@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A65B8D61E7A6E9F002401B9 /* icon_screening_unselect@3x.png */; };
 		9A65B90F1E7A6E9F002401B9 /* UIViewController+TabBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8D81E7A6E9F002401B9 /* UIViewController+TabBarHidden.m */; };
-		9A65B9101E7A6E9F002401B9 /* SYAlphaMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8DB1E7A6E9F002401B9 /* SYAlphaMaker.m */; };
-		9A65B9111E7A6E9F002401B9 /* SYUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8DF1E7A6E9F002401B9 /* SYUtils.m */; };
-		9A65B9121E7A6E9F002401B9 /* UIButton+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8E11E7A6E9F002401B9 /* UIButton+SYBuilder.m */; };
-		9A65B9131E7A6E9F002401B9 /* UIColor+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8E31E7A6E9F002401B9 /* UIColor+SYBuilder.m */; };
-		9A65B9141E7A6E9F002401B9 /* UIFont+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8E51E7A6E9F002401B9 /* UIFont+SYBuilder.m */; };
-		9A65B9151E7A6E9F002401B9 /* UIImageView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8E71E7A6E9F002401B9 /* UIImageView+SYBuilder.m */; };
-		9A65B9161E7A6E9F002401B9 /* UILabel+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8E91E7A6E9F002401B9 /* UILabel+SYBuilder.m */; };
-		9A65B9171E7A6E9F002401B9 /* UITableView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8EB1E7A6E9F002401B9 /* UITableView+SYBuilder.m */; };
-		9A65B9181E7A6E9F002401B9 /* UITextField+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8ED1E7A6E9F002401B9 /* UITextField+SYBuilder.m */; };
-		9A65B9191E7A6E9F002401B9 /* UIView+SYBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8EF1E7A6E9F002401B9 /* UIView+SYBuilder.m */; };
-		9A65B9271E7A9937002401B9 /* NSMutableAttributedString+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B9241E7A9937002401B9 /* NSMutableAttributedString+SF.m */; };
-		9A65B9281E7A9937002401B9 /* NSString+SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B9261E7A9937002401B9 /* NSString+SF.m */; };
+		9A69F0151E8258D60044A7C9 /* SFScrollLabelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69F0121E8258D60044A7C9 /* SFScrollLabelManager.m */; };
+		9A69F0161E8258D60044A7C9 /* UILabel+SFScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69F0141E8258D60044A7C9 /* UILabel+SFScroll.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,32 +146,10 @@
 		9A65B8D61E7A6E9F002401B9 /* icon_screening_unselect@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_screening_unselect@3x.png"; sourceTree = "<group>"; };
 		9A65B8D71E7A6E9F002401B9 /* UIViewController+TabBarHidden.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TabBarHidden.h"; sourceTree = "<group>"; };
 		9A65B8D81E7A6E9F002401B9 /* UIViewController+TabBarHidden.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TabBarHidden.m"; sourceTree = "<group>"; };
-		9A65B8DA1E7A6E9F002401B9 /* SYAlphaMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAlphaMaker.h; sourceTree = "<group>"; };
-		9A65B8DB1E7A6E9F002401B9 /* SYAlphaMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAlphaMaker.m; sourceTree = "<group>"; };
-		9A65B8DC1E7A6E9F002401B9 /* SYUIBuilderDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIBuilderDef.h; sourceTree = "<group>"; };
-		9A65B8DD1E7A6E9F002401B9 /* SYUIBuilderHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIBuilderHeader.h; sourceTree = "<group>"; };
-		9A65B8DE1E7A6E9F002401B9 /* SYUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUtils.h; sourceTree = "<group>"; };
-		9A65B8DF1E7A6E9F002401B9 /* SYUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUtils.m; sourceTree = "<group>"; };
-		9A65B8E01E7A6E9F002401B9 /* UIButton+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8E11E7A6E9F002401B9 /* UIButton+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8E21E7A6E9F002401B9 /* UIColor+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8E31E7A6E9F002401B9 /* UIColor+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8E41E7A6E9F002401B9 /* UIFont+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8E51E7A6E9F002401B9 /* UIFont+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8E61E7A6E9F002401B9 /* UIImageView+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8E71E7A6E9F002401B9 /* UIImageView+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8E81E7A6E9F002401B9 /* UILabel+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8E91E7A6E9F002401B9 /* UILabel+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8EA1E7A6E9F002401B9 /* UITableView+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8EB1E7A6E9F002401B9 /* UITableView+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8EC1E7A6E9F002401B9 /* UITextField+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8ED1E7A6E9F002401B9 /* UITextField+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B8EE1E7A6E9F002401B9 /* UIView+SYBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SYBuilder.h"; sourceTree = "<group>"; };
-		9A65B8EF1E7A6E9F002401B9 /* UIView+SYBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SYBuilder.m"; sourceTree = "<group>"; };
-		9A65B9231E7A9937002401B9 /* NSMutableAttributedString+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SF.h"; sourceTree = "<group>"; };
-		9A65B9241E7A9937002401B9 /* NSMutableAttributedString+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SF.m"; sourceTree = "<group>"; };
-		9A65B9251E7A9937002401B9 /* NSString+SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SF.h"; sourceTree = "<group>"; };
-		9A65B9261E7A9937002401B9 /* NSString+SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SF.m"; sourceTree = "<group>"; };
+		9A69F0111E8258D60044A7C9 /* SFScrollLabelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFScrollLabelManager.h; sourceTree = "<group>"; };
+		9A69F0121E8258D60044A7C9 /* SFScrollLabelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFScrollLabelManager.m; sourceTree = "<group>"; };
+		9A69F0131E8258D60044A7C9 /* UILabel+SFScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SFScroll.h"; sourceTree = "<group>"; };
+		9A69F0141E8258D60044A7C9 /* UILabel+SFScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SFScroll.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,13 +249,13 @@
 		9A65B89C1E7A6E9F002401B9 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				9A69F0101E8258D60044A7C9 /* SFScrollLabel */,
 				9A65B89D1E7A6E9F002401B9 /* SYAlertBuilder */,
 				9A65B8A01E7A6E9F002401B9 /* SYGuideView */,
 				9A65B8AC1E7A6E9F002401B9 /* SYLineBtns */,
 				9A65B8B61E7A6E9F002401B9 /* SYNaviHelper */,
 				9A65B8BE1E7A6E9F002401B9 /* SYScrollImage */,
 				9A65B8C51E7A6E9F002401B9 /* SYTabBar */,
-				9A65B8D91E7A6E9F002401B9 /* SYUIBuilder */,
 			);
 			path = framework;
 			sourceTree = "<group>";
@@ -402,37 +370,15 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		9A65B8D91E7A6E9F002401B9 /* SYUIBuilder */ = {
+		9A69F0101E8258D60044A7C9 /* SFScrollLabel */ = {
 			isa = PBXGroup;
 			children = (
-				9A65B8DA1E7A6E9F002401B9 /* SYAlphaMaker.h */,
-				9A65B8DB1E7A6E9F002401B9 /* SYAlphaMaker.m */,
-				9A65B8DC1E7A6E9F002401B9 /* SYUIBuilderDef.h */,
-				9A65B8DD1E7A6E9F002401B9 /* SYUIBuilderHeader.h */,
-				9A65B8DE1E7A6E9F002401B9 /* SYUtils.h */,
-				9A65B8DF1E7A6E9F002401B9 /* SYUtils.m */,
-				9A65B8E01E7A6E9F002401B9 /* UIButton+SYBuilder.h */,
-				9A65B8E11E7A6E9F002401B9 /* UIButton+SYBuilder.m */,
-				9A65B8E21E7A6E9F002401B9 /* UIColor+SYBuilder.h */,
-				9A65B8E31E7A6E9F002401B9 /* UIColor+SYBuilder.m */,
-				9A65B8E41E7A6E9F002401B9 /* UIFont+SYBuilder.h */,
-				9A65B8E51E7A6E9F002401B9 /* UIFont+SYBuilder.m */,
-				9A65B8E61E7A6E9F002401B9 /* UIImageView+SYBuilder.h */,
-				9A65B8E71E7A6E9F002401B9 /* UIImageView+SYBuilder.m */,
-				9A65B8E81E7A6E9F002401B9 /* UILabel+SYBuilder.h */,
-				9A65B8E91E7A6E9F002401B9 /* UILabel+SYBuilder.m */,
-				9A65B8EA1E7A6E9F002401B9 /* UITableView+SYBuilder.h */,
-				9A65B8EB1E7A6E9F002401B9 /* UITableView+SYBuilder.m */,
-				9A65B8EC1E7A6E9F002401B9 /* UITextField+SYBuilder.h */,
-				9A65B8ED1E7A6E9F002401B9 /* UITextField+SYBuilder.m */,
-				9A65B8EE1E7A6E9F002401B9 /* UIView+SYBuilder.h */,
-				9A65B8EF1E7A6E9F002401B9 /* UIView+SYBuilder.m */,
-				9A65B9231E7A9937002401B9 /* NSMutableAttributedString+SF.h */,
-				9A65B9241E7A9937002401B9 /* NSMutableAttributedString+SF.m */,
-				9A65B9251E7A9937002401B9 /* NSString+SF.h */,
-				9A65B9261E7A9937002401B9 /* NSString+SF.m */,
+				9A69F0111E8258D60044A7C9 /* SFScrollLabelManager.h */,
+				9A69F0121E8258D60044A7C9 /* SFScrollLabelManager.m */,
+				9A69F0131E8258D60044A7C9 /* UILabel+SFScroll.h */,
+				9A69F0141E8258D60044A7C9 /* UILabel+SFScroll.m */,
 			);
-			path = SYUIBuilder;
+			path = SFScrollLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -582,27 +528,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A65B9141E7A6E9F002401B9 /* UIFont+SYBuilder.m in Sources */,
 				9A617A461E77CF8C00B1A11F /* ThirdViewController.m in Sources */,
 				9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */,
-				9A65B9181E7A6E9F002401B9 /* UITextField+SYBuilder.m in Sources */,
 				9A65B90F1E7A6E9F002401B9 /* UIViewController+TabBarHidden.m in Sources */,
-				9A65B9121E7A6E9F002401B9 /* UIButton+SYBuilder.m in Sources */,
 				9A65B9061E7A6E9F002401B9 /* SYTabBarMaker.m in Sources */,
 				9A65B9041E7A6E9F002401B9 /* SYTabBarButtonItem.m in Sources */,
 				9A617A451E77CF8C00B1A11F /* SecondViewController.m in Sources */,
-				9A65B9111E7A6E9F002401B9 /* SYUtils.m in Sources */,
-				9A65B9171E7A6E9F002401B9 /* UITableView+SYBuilder.m in Sources */,
+				9A69F0151E8258D60044A7C9 /* SFScrollLabelManager.m in Sources */,
 				9A65B8FB1E7A6E9F002401B9 /* SFTitleIconView.m in Sources */,
-				9A65B9161E7A6E9F002401B9 /* UILabel+SYBuilder.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A65B8FF1E7A6E9F002401B9 /* SYNavigationTool.m in Sources */,
 				9A65B9001E7A6E9F002401B9 /* UIViewController+NavigationTool.m in Sources */,
-				9A65B9281E7A9937002401B9 /* NSString+SF.m in Sources */,
-				9A65B9191E7A6E9F002401B9 /* UIView+SYBuilder.m in Sources */,
 				9A65B9051E7A6E9F002401B9 /* SYTabBarController.m in Sources */,
 				9A65B9011E7A6E9F002401B9 /* ScrollDotIndicator.m in Sources */,
-				9A65B9271E7A9937002401B9 /* NSMutableAttributedString+SF.m in Sources */,
+				9A69F0161E8258D60044A7C9 /* UILabel+SFScroll.m in Sources */,
 				9A65B9021E7A6E9F002401B9 /* ScrollLineIndicator.m in Sources */,
 				9A65B8F71E7A6E9F002401B9 /* SYGuiViewBuilder.m in Sources */,
 				9A617A471E77CF8C00B1A11F /* ViewController.m in Sources */,
@@ -610,12 +549,9 @@
 				9A65B8FC1E7A6E9F002401B9 /* SYLineBtnBuilder.m in Sources */,
 				9A65B8F91E7A6E9F002401B9 /* SFTitleIconBtn.m in Sources */,
 				9A65B9071E7A6E9F002401B9 /* SYTabBarModel.m in Sources */,
-				9A65B9131E7A6E9F002401B9 /* UIColor+SYBuilder.m in Sources */,
 				9A65B8F51E7A6E9F002401B9 /* SYGuideView.m in Sources */,
 				9A617A441E77CF8C00B1A11F /* FirstViewController.m in Sources */,
-				9A65B9101E7A6E9F002401B9 /* SYAlphaMaker.m in Sources */,
 				9A65B8F01E7A6E9F002401B9 /* SYAlertBuilder.m in Sources */,
-				9A65B9151E7A6E9F002401B9 /* UIImageView+SYBuilder.m in Sources */,
 				9A65B9031E7A6E9F002401B9 /* SYScrollImageView.m in Sources */,
 				9A65B8F61E7A6E9F002401B9 /* SYGuideViewCell.m in Sources */,
 				9A65B9081E7A6E9F002401B9 /* SYUnReadView.m in Sources */,

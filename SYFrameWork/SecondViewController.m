@@ -9,7 +9,6 @@
 #import "SecondViewController.h"
 #import "SYAlertBuilder.h"
 #import "SYTabBarMaker.h"
-#import "SYUIBuilderHeader.h"
 
 @interface SecondViewController ()
 
@@ -21,8 +20,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    Button.nTitle(@"sds").btnFont(Fntb(@45)).xywh(100,200,200,60).bgColor(color(@"f04554,0.3")).intoView(self.view).targetSel(self,@selector(click));
     
 }
 
