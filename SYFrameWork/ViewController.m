@@ -14,6 +14,7 @@
 #import "ThirdViewController.h"
 
 #import "SYGuiViewBuilder.h"
+#import "SFLogHeader.h"
 
 @interface ViewController ()
 

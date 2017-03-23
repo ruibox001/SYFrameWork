@@ -52,6 +52,14 @@
 		9A65B90F1E7A6E9F002401B9 /* UIViewController+TabBarHidden.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A65B8D81E7A6E9F002401B9 /* UIViewController+TabBarHidden.m */; };
 		9A69F0151E8258D60044A7C9 /* SFScrollLabelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69F0121E8258D60044A7C9 /* SFScrollLabelManager.m */; };
 		9A69F0161E8258D60044A7C9 /* UILabel+SFScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69F0141E8258D60044A7C9 /* UILabel+SFScroll.m */; };
+		9A7412A31E836C820047647B /* NSObject+SFBaseAop.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412911E836C820047647B /* NSObject+SFBaseAop.m */; };
+		9A7412A41E836C820047647B /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412941E836C820047647B /* FCFileManager.m */; };
+		9A7412A51E836C820047647B /* SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412961E836C820047647B /* SFLog.m */; };
+		9A7412A61E836C820047647B /* SFLogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412981E836C820047647B /* SFLogFile.m */; };
+		9A7412A71E836C820047647B /* SFLogMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A74129B1E836C820047647B /* SFLogMsg.m */; };
+		9A7412A81E836C820047647B /* AppDelegate+SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A74129E1E836C820047647B /* AppDelegate+SFLog.m */; };
+		9A7412A91E836C820047647B /* UIControl+SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412A01E836C820047647B /* UIControl+SFLog.m */; };
+		9A7412AA1E836C820047647B /* UIViewController+SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412A21E836C820047647B /* UIViewController+SFLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +158,23 @@
 		9A69F0121E8258D60044A7C9 /* SFScrollLabelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFScrollLabelManager.m; sourceTree = "<group>"; };
 		9A69F0131E8258D60044A7C9 /* UILabel+SFScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SFScroll.h"; sourceTree = "<group>"; };
 		9A69F0141E8258D60044A7C9 /* UILabel+SFScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SFScroll.m"; sourceTree = "<group>"; };
+		9A7412901E836C820047647B /* NSObject+SFBaseAop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SFBaseAop.h"; sourceTree = "<group>"; };
+		9A7412911E836C820047647B /* NSObject+SFBaseAop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SFBaseAop.m"; sourceTree = "<group>"; };
+		9A7412931E836C820047647B /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		9A7412941E836C820047647B /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
+		9A7412951E836C820047647B /* SFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLog.h; sourceTree = "<group>"; };
+		9A7412961E836C820047647B /* SFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLog.m; sourceTree = "<group>"; };
+		9A7412971E836C820047647B /* SFLogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLogFile.h; sourceTree = "<group>"; };
+		9A7412981E836C820047647B /* SFLogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLogFile.m; sourceTree = "<group>"; };
+		9A7412991E836C820047647B /* SFLogHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLogHeader.h; sourceTree = "<group>"; };
+		9A74129A1E836C820047647B /* SFLogMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLogMsg.h; sourceTree = "<group>"; };
+		9A74129B1E836C820047647B /* SFLogMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLogMsg.m; sourceTree = "<group>"; };
+		9A74129D1E836C820047647B /* AppDelegate+SFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+SFLog.h"; sourceTree = "<group>"; };
+		9A74129E1E836C820047647B /* AppDelegate+SFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+SFLog.m"; sourceTree = "<group>"; };
+		9A74129F1E836C820047647B /* UIControl+SFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SFLog.h"; sourceTree = "<group>"; };
+		9A7412A01E836C820047647B /* UIControl+SFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SFLog.m"; sourceTree = "<group>"; };
+		9A7412A11E836C820047647B /* UIViewController+SFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SFLog.h"; sourceTree = "<group>"; };
+		9A7412A21E836C820047647B /* UIViewController+SFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SFLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +274,7 @@
 		9A65B89C1E7A6E9F002401B9 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				9A74128E1E836C820047647B /* SFLog */,
 				9A69F0101E8258D60044A7C9 /* SFScrollLabel */,
 				9A65B89D1E7A6E9F002401B9 /* SYAlertBuilder */,
 				9A65B8A01E7A6E9F002401B9 /* SYGuideView */,
@@ -379,6 +405,54 @@
 				9A69F0141E8258D60044A7C9 /* UILabel+SFScroll.m */,
 			);
 			path = SFScrollLabel;
+			sourceTree = "<group>";
+		};
+		9A74128E1E836C820047647B /* SFLog */ = {
+			isa = PBXGroup;
+			children = (
+				9A74128F1E836C820047647B /* AOPBase */,
+				9A7412921E836C820047647B /* FCFileManager */,
+				9A7412951E836C820047647B /* SFLog.h */,
+				9A7412961E836C820047647B /* SFLog.m */,
+				9A7412971E836C820047647B /* SFLogFile.h */,
+				9A7412981E836C820047647B /* SFLogFile.m */,
+				9A7412991E836C820047647B /* SFLogHeader.h */,
+				9A74129A1E836C820047647B /* SFLogMsg.h */,
+				9A74129B1E836C820047647B /* SFLogMsg.m */,
+				9A74129C1E836C820047647B /* UseIn */,
+			);
+			path = SFLog;
+			sourceTree = "<group>";
+		};
+		9A74128F1E836C820047647B /* AOPBase */ = {
+			isa = PBXGroup;
+			children = (
+				9A7412901E836C820047647B /* NSObject+SFBaseAop.h */,
+				9A7412911E836C820047647B /* NSObject+SFBaseAop.m */,
+			);
+			path = AOPBase;
+			sourceTree = "<group>";
+		};
+		9A7412921E836C820047647B /* FCFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A7412931E836C820047647B /* FCFileManager.h */,
+				9A7412941E836C820047647B /* FCFileManager.m */,
+			);
+			path = FCFileManager;
+			sourceTree = "<group>";
+		};
+		9A74129C1E836C820047647B /* UseIn */ = {
+			isa = PBXGroup;
+			children = (
+				9A74129D1E836C820047647B /* AppDelegate+SFLog.h */,
+				9A74129E1E836C820047647B /* AppDelegate+SFLog.m */,
+				9A74129F1E836C820047647B /* UIControl+SFLog.h */,
+				9A7412A01E836C820047647B /* UIControl+SFLog.m */,
+				9A7412A11E836C820047647B /* UIViewController+SFLog.h */,
+				9A7412A21E836C820047647B /* UIViewController+SFLog.m */,
+			);
+			path = UseIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,32 +603,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A617A461E77CF8C00B1A11F /* ThirdViewController.m in Sources */,
+				9A7412A41E836C820047647B /* FCFileManager.m in Sources */,
 				9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */,
 				9A65B90F1E7A6E9F002401B9 /* UIViewController+TabBarHidden.m in Sources */,
 				9A65B9061E7A6E9F002401B9 /* SYTabBarMaker.m in Sources */,
 				9A65B9041E7A6E9F002401B9 /* SYTabBarButtonItem.m in Sources */,
 				9A617A451E77CF8C00B1A11F /* SecondViewController.m in Sources */,
+				9A7412A71E836C820047647B /* SFLogMsg.m in Sources */,
 				9A69F0151E8258D60044A7C9 /* SFScrollLabelManager.m in Sources */,
 				9A65B8FB1E7A6E9F002401B9 /* SFTitleIconView.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A65B8FF1E7A6E9F002401B9 /* SYNavigationTool.m in Sources */,
 				9A65B9001E7A6E9F002401B9 /* UIViewController+NavigationTool.m in Sources */,
 				9A65B9051E7A6E9F002401B9 /* SYTabBarController.m in Sources */,
+				9A7412AA1E836C820047647B /* UIViewController+SFLog.m in Sources */,
 				9A65B9011E7A6E9F002401B9 /* ScrollDotIndicator.m in Sources */,
+				9A7412A61E836C820047647B /* SFLogFile.m in Sources */,
 				9A69F0161E8258D60044A7C9 /* UILabel+SFScroll.m in Sources */,
+				9A7412A31E836C820047647B /* NSObject+SFBaseAop.m in Sources */,
 				9A65B9021E7A6E9F002401B9 /* ScrollLineIndicator.m in Sources */,
 				9A65B8F71E7A6E9F002401B9 /* SYGuiViewBuilder.m in Sources */,
 				9A617A471E77CF8C00B1A11F /* ViewController.m in Sources */,
 				9A65B8FA1E7A6E9F002401B9 /* SFTitleIconModel.m in Sources */,
 				9A65B8FC1E7A6E9F002401B9 /* SYLineBtnBuilder.m in Sources */,
+				9A7412A51E836C820047647B /* SFLog.m in Sources */,
 				9A65B8F91E7A6E9F002401B9 /* SFTitleIconBtn.m in Sources */,
 				9A65B9071E7A6E9F002401B9 /* SYTabBarModel.m in Sources */,
 				9A65B8F51E7A6E9F002401B9 /* SYGuideView.m in Sources */,
 				9A617A441E77CF8C00B1A11F /* FirstViewController.m in Sources */,
 				9A65B8F01E7A6E9F002401B9 /* SYAlertBuilder.m in Sources */,
+				9A7412A91E836C820047647B /* UIControl+SFLog.m in Sources */,
 				9A65B9031E7A6E9F002401B9 /* SYScrollImageView.m in Sources */,
 				9A65B8F61E7A6E9F002401B9 /* SYGuideViewCell.m in Sources */,
 				9A65B9081E7A6E9F002401B9 /* SYUnReadView.m in Sources */,
+				9A7412A81E836C820047647B /* AppDelegate+SFLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
