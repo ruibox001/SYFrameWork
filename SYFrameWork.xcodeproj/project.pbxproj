@@ -60,6 +60,9 @@
 		9A7412A81E836C820047647B /* AppDelegate+SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A74129E1E836C820047647B /* AppDelegate+SFLog.m */; };
 		9A7412A91E836C820047647B /* UIControl+SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412A01E836C820047647B /* UIControl+SFLog.m */; };
 		9A7412AA1E836C820047647B /* UIViewController+SFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7412A21E836C820047647B /* UIViewController+SFLog.m */; };
+		9A7A37501E84F657008FC0DA /* SFProgressBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A374D1E84F657008FC0DA /* SFProgressBuilder.m */; };
+		9A7A37511E84F657008FC0DA /* SFProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A374F1E84F657008FC0DA /* SFProgressView.m */; };
+		9A7A375C1E8504FF008FC0DA /* SFMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A375B1E8504FF008FC0DA /* SFMoveView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +178,12 @@
 		9A7412A01E836C820047647B /* UIControl+SFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SFLog.m"; sourceTree = "<group>"; };
 		9A7412A11E836C820047647B /* UIViewController+SFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SFLog.h"; sourceTree = "<group>"; };
 		9A7412A21E836C820047647B /* UIViewController+SFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SFLog.m"; sourceTree = "<group>"; };
+		9A7A374C1E84F657008FC0DA /* SFProgressBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFProgressBuilder.h; sourceTree = "<group>"; };
+		9A7A374D1E84F657008FC0DA /* SFProgressBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFProgressBuilder.m; sourceTree = "<group>"; };
+		9A7A374E1E84F657008FC0DA /* SFProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFProgressView.h; sourceTree = "<group>"; };
+		9A7A374F1E84F657008FC0DA /* SFProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFProgressView.m; sourceTree = "<group>"; };
+		9A7A375A1E8504FF008FC0DA /* SFMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMoveView.h; sourceTree = "<group>"; };
+		9A7A375B1E8504FF008FC0DA /* SFMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMoveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +283,8 @@
 		9A65B89C1E7A6E9F002401B9 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				9A7A37591E8504FF008FC0DA /* MoveLabel */,
+				9A7A374B1E84F657008FC0DA /* SFProgress */,
 				9A74128E1E836C820047647B /* SFLog */,
 				9A69F0101E8258D60044A7C9 /* SFScrollLabel */,
 				9A65B89D1E7A6E9F002401B9 /* SYAlertBuilder */,
@@ -455,6 +466,26 @@
 			path = UseIn;
 			sourceTree = "<group>";
 		};
+		9A7A374B1E84F657008FC0DA /* SFProgress */ = {
+			isa = PBXGroup;
+			children = (
+				9A7A374C1E84F657008FC0DA /* SFProgressBuilder.h */,
+				9A7A374D1E84F657008FC0DA /* SFProgressBuilder.m */,
+				9A7A374E1E84F657008FC0DA /* SFProgressView.h */,
+				9A7A374F1E84F657008FC0DA /* SFProgressView.m */,
+			);
+			path = SFProgress;
+			sourceTree = "<group>";
+		};
+		9A7A37591E8504FF008FC0DA /* MoveLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9A7A375A1E8504FF008FC0DA /* SFMoveView.h */,
+				9A7A375B1E8504FF008FC0DA /* SFMoveView.m */,
+			);
+			path = MoveLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -613,6 +644,7 @@
 				9A69F0151E8258D60044A7C9 /* SFScrollLabelManager.m in Sources */,
 				9A65B8FB1E7A6E9F002401B9 /* SFTitleIconView.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
+				9A7A37501E84F657008FC0DA /* SFProgressBuilder.m in Sources */,
 				9A65B8FF1E7A6E9F002401B9 /* SYNavigationTool.m in Sources */,
 				9A65B9001E7A6E9F002401B9 /* UIViewController+NavigationTool.m in Sources */,
 				9A65B9051E7A6E9F002401B9 /* SYTabBarController.m in Sources */,
@@ -622,6 +654,7 @@
 				9A69F0161E8258D60044A7C9 /* UILabel+SFScroll.m in Sources */,
 				9A7412A31E836C820047647B /* NSObject+SFBaseAop.m in Sources */,
 				9A65B9021E7A6E9F002401B9 /* ScrollLineIndicator.m in Sources */,
+				9A7A37511E84F657008FC0DA /* SFProgressView.m in Sources */,
 				9A65B8F71E7A6E9F002401B9 /* SYGuiViewBuilder.m in Sources */,
 				9A617A471E77CF8C00B1A11F /* ViewController.m in Sources */,
 				9A65B8FA1E7A6E9F002401B9 /* SFTitleIconModel.m in Sources */,
@@ -632,6 +665,7 @@
 				9A65B8F51E7A6E9F002401B9 /* SYGuideView.m in Sources */,
 				9A617A441E77CF8C00B1A11F /* FirstViewController.m in Sources */,
 				9A65B8F01E7A6E9F002401B9 /* SYAlertBuilder.m in Sources */,
+				9A7A375C1E8504FF008FC0DA /* SFMoveView.m in Sources */,
 				9A7412A91E836C820047647B /* UIControl+SFLog.m in Sources */,
 				9A65B9031E7A6E9F002401B9 /* SYScrollImageView.m in Sources */,
 				9A65B8F61E7A6E9F002401B9 /* SYGuideViewCell.m in Sources */,
