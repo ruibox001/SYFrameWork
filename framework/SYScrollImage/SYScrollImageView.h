@@ -100,6 +100,9 @@ SYScrollImageView *scrollImage(BOOL limit);
 
 //应用例子
 /*
+
+主要，使用时要设置UIViewController的self.automaticallyAdjustsScrollViewInsets = NO;
+ 
 UIView *v = scrollImageUnLimit.addUrls(@[@"http://192.168.1.24:8080/resources/banner/6102ea9b0bd4412eb0f728c5fa6188b4.jpg",@"http://192.168.1.24:8080/resources/banner/0e3fe7190b104eeeb1499036b8dab991.png",@"http://p2.so.qhimgs1.com/t019f0a9e88ea82026e.jpg"]).scrollBlock(^(NSInteger index){
     NSLog(@"index: %ld",index);
 }).click(^(NSInteger index){

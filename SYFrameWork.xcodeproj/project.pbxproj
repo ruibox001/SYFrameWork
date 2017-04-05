@@ -63,6 +63,18 @@
 		9A7A37501E84F657008FC0DA /* SFProgressBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A374D1E84F657008FC0DA /* SFProgressBuilder.m */; };
 		9A7A37511E84F657008FC0DA /* SFProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A374F1E84F657008FC0DA /* SFProgressView.m */; };
 		9A7A375C1E8504FF008FC0DA /* SFMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A375B1E8504FF008FC0DA /* SFMoveView.m */; };
+		9A87C1BA1E94E9C400950CC9 /* AppDelegate+Socket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87C1B71E94E9C400950CC9 /* AppDelegate+Socket.m */; };
+		9A87C1BB1E94E9C400950CC9 /* TcpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87C1B91E94E9C400950CC9 /* TcpSocket.m */; };
+		9A87C1BE1E94E9EB00950CC9 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A87C1BD1E94E9EB00950CC9 /* GCDAsyncSocket.m */; };
+		9A972C531E8A3B6200FC4694 /* SFCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C521E8A3B6200FC4694 /* SFCache.m */; };
+		9A972C5D1E8A3BA400FC4694 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C561E8A3BA400FC4694 /* YYCache.m */; };
+		9A972C5E1E8A3BA400FC4694 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C581E8A3BA400FC4694 /* YYDiskCache.m */; };
+		9A972C5F1E8A3BA400FC4694 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C5A1E8A3BA400FC4694 /* YYKVStorage.m */; };
+		9A972C601E8A3BA400FC4694 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C5C1E8A3BA400FC4694 /* YYMemoryCache.m */; };
+		9A972C631E8A3BC600FC4694 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A972C621E8A3BC600FC4694 /* libsqlite3.tbd */; };
+		9A972C661E8A3CD800FC4694 /* NSObject+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C651E8A3CD800FC4694 /* NSObject+Cache.m */; };
+		9A972C6D1E8A3D3400FC4694 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C691E8A3D3400FC4694 /* NSObject+YYModel.m */; };
+		9A972C6E1E8A3D3400FC4694 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A972C6B1E8A3D3400FC4694 /* YYClassInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +196,30 @@
 		9A7A374F1E84F657008FC0DA /* SFProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFProgressView.m; sourceTree = "<group>"; };
 		9A7A375A1E8504FF008FC0DA /* SFMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMoveView.h; sourceTree = "<group>"; };
 		9A7A375B1E8504FF008FC0DA /* SFMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMoveView.m; sourceTree = "<group>"; };
+		9A87C1B61E94E9C400950CC9 /* AppDelegate+Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Socket.h"; sourceTree = "<group>"; };
+		9A87C1B71E94E9C400950CC9 /* AppDelegate+Socket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Socket.m"; sourceTree = "<group>"; };
+		9A87C1B81E94E9C400950CC9 /* TcpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TcpSocket.h; sourceTree = "<group>"; };
+		9A87C1B91E94E9C400950CC9 /* TcpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TcpSocket.m; sourceTree = "<group>"; };
+		9A87C1BC1E94E9EB00950CC9 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		9A87C1BD1E94E9EB00950CC9 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		9A972C511E8A3B6200FC4694 /* SFCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFCache.h; sourceTree = "<group>"; };
+		9A972C521E8A3B6200FC4694 /* SFCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFCache.m; sourceTree = "<group>"; };
+		9A972C551E8A3BA400FC4694 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		9A972C561E8A3BA400FC4694 /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		9A972C571E8A3BA400FC4694 /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		9A972C581E8A3BA400FC4694 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		9A972C591E8A3BA400FC4694 /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		9A972C5A1E8A3BA400FC4694 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		9A972C5B1E8A3BA400FC4694 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		9A972C5C1E8A3BA400FC4694 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		9A972C621E8A3BC600FC4694 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9A972C641E8A3CD800FC4694 /* NSObject+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Cache.h"; sourceTree = "<group>"; };
+		9A972C651E8A3CD800FC4694 /* NSObject+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Cache.m"; sourceTree = "<group>"; };
+		9A972C681E8A3D3400FC4694 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		9A972C691E8A3D3400FC4694 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		9A972C6A1E8A3D3400FC4694 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		9A972C6B1E8A3D3400FC4694 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		9A972C6C1E8A3D3400FC4694 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A972C631E8A3BC600FC4694 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +256,7 @@
 				9A61C9851E7102C900B10D09 /* SYFrameWorkTests */,
 				9A61C9901E7102C900B10D09 /* SYFrameWorkUITests */,
 				9A61C96A1E7102C900B10D09 /* Products */,
+				9A972C611E8A3BC600FC4694 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,6 +321,8 @@
 		9A65B89C1E7A6E9F002401B9 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				9A87C1B51E94E9C400950CC9 /* SocketManager */,
+				9A972C501E8A3B6200FC4694 /* SFCache */,
 				9A7A37591E8504FF008FC0DA /* MoveLabel */,
 				9A7A374B1E84F657008FC0DA /* SFProgress */,
 				9A74128E1E836C820047647B /* SFLog */,
@@ -486,6 +526,67 @@
 			path = MoveLabel;
 			sourceTree = "<group>";
 		};
+		9A87C1B51E94E9C400950CC9 /* SocketManager */ = {
+			isa = PBXGroup;
+			children = (
+				9A87C1BC1E94E9EB00950CC9 /* GCDAsyncSocket.h */,
+				9A87C1BD1E94E9EB00950CC9 /* GCDAsyncSocket.m */,
+				9A87C1B61E94E9C400950CC9 /* AppDelegate+Socket.h */,
+				9A87C1B71E94E9C400950CC9 /* AppDelegate+Socket.m */,
+				9A87C1B81E94E9C400950CC9 /* TcpSocket.h */,
+				9A87C1B91E94E9C400950CC9 /* TcpSocket.m */,
+			);
+			path = SocketManager;
+			sourceTree = "<group>";
+		};
+		9A972C501E8A3B6200FC4694 /* SFCache */ = {
+			isa = PBXGroup;
+			children = (
+				9A972C671E8A3D3400FC4694 /* YYModel */,
+				9A972C541E8A3BA400FC4694 /* YYCache */,
+				9A972C511E8A3B6200FC4694 /* SFCache.h */,
+				9A972C521E8A3B6200FC4694 /* SFCache.m */,
+				9A972C641E8A3CD800FC4694 /* NSObject+Cache.h */,
+				9A972C651E8A3CD800FC4694 /* NSObject+Cache.m */,
+			);
+			path = SFCache;
+			sourceTree = "<group>";
+		};
+		9A972C541E8A3BA400FC4694 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				9A972C551E8A3BA400FC4694 /* YYCache.h */,
+				9A972C561E8A3BA400FC4694 /* YYCache.m */,
+				9A972C571E8A3BA400FC4694 /* YYDiskCache.h */,
+				9A972C581E8A3BA400FC4694 /* YYDiskCache.m */,
+				9A972C591E8A3BA400FC4694 /* YYKVStorage.h */,
+				9A972C5A1E8A3BA400FC4694 /* YYKVStorage.m */,
+				9A972C5B1E8A3BA400FC4694 /* YYMemoryCache.h */,
+				9A972C5C1E8A3BA400FC4694 /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
+		9A972C611E8A3BC600FC4694 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A972C621E8A3BC600FC4694 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A972C671E8A3D3400FC4694 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A972C681E8A3D3400FC4694 /* NSObject+YYModel.h */,
+				9A972C691E8A3D3400FC4694 /* NSObject+YYModel.m */,
+				9A972C6A1E8A3D3400FC4694 /* YYClassInfo.h */,
+				9A972C6B1E8A3D3400FC4694 /* YYClassInfo.m */,
+				9A972C6C1E8A3D3400FC4694 /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -635,20 +736,25 @@
 			files = (
 				9A617A461E77CF8C00B1A11F /* ThirdViewController.m in Sources */,
 				9A7412A41E836C820047647B /* FCFileManager.m in Sources */,
+				9A87C1BA1E94E9C400950CC9 /* AppDelegate+Socket.m in Sources */,
 				9A61C9711E7102C900B10D09 /* AppDelegate.m in Sources */,
 				9A65B90F1E7A6E9F002401B9 /* UIViewController+TabBarHidden.m in Sources */,
 				9A65B9061E7A6E9F002401B9 /* SYTabBarMaker.m in Sources */,
+				9A87C1BB1E94E9C400950CC9 /* TcpSocket.m in Sources */,
 				9A65B9041E7A6E9F002401B9 /* SYTabBarButtonItem.m in Sources */,
 				9A617A451E77CF8C00B1A11F /* SecondViewController.m in Sources */,
+				9A972C601E8A3BA400FC4694 /* YYMemoryCache.m in Sources */,
 				9A7412A71E836C820047647B /* SFLogMsg.m in Sources */,
 				9A69F0151E8258D60044A7C9 /* SFScrollLabelManager.m in Sources */,
 				9A65B8FB1E7A6E9F002401B9 /* SFTitleIconView.m in Sources */,
 				9A61C96E1E7102C900B10D09 /* main.m in Sources */,
 				9A7A37501E84F657008FC0DA /* SFProgressBuilder.m in Sources */,
 				9A65B8FF1E7A6E9F002401B9 /* SYNavigationTool.m in Sources */,
+				9A972C661E8A3CD800FC4694 /* NSObject+Cache.m in Sources */,
 				9A65B9001E7A6E9F002401B9 /* UIViewController+NavigationTool.m in Sources */,
 				9A65B9051E7A6E9F002401B9 /* SYTabBarController.m in Sources */,
 				9A7412AA1E836C820047647B /* UIViewController+SFLog.m in Sources */,
+				9A972C531E8A3B6200FC4694 /* SFCache.m in Sources */,
 				9A65B9011E7A6E9F002401B9 /* ScrollDotIndicator.m in Sources */,
 				9A7412A61E836C820047647B /* SFLogFile.m in Sources */,
 				9A69F0161E8258D60044A7C9 /* UILabel+SFScroll.m in Sources */,
@@ -666,8 +772,14 @@
 				9A617A441E77CF8C00B1A11F /* FirstViewController.m in Sources */,
 				9A65B8F01E7A6E9F002401B9 /* SYAlertBuilder.m in Sources */,
 				9A7A375C1E8504FF008FC0DA /* SFMoveView.m in Sources */,
+				9A972C6D1E8A3D3400FC4694 /* NSObject+YYModel.m in Sources */,
+				9A972C5D1E8A3BA400FC4694 /* YYCache.m in Sources */,
+				9A87C1BE1E94E9EB00950CC9 /* GCDAsyncSocket.m in Sources */,
 				9A7412A91E836C820047647B /* UIControl+SFLog.m in Sources */,
+				9A972C5F1E8A3BA400FC4694 /* YYKVStorage.m in Sources */,
+				9A972C5E1E8A3BA400FC4694 /* YYDiskCache.m in Sources */,
 				9A65B9031E7A6E9F002401B9 /* SYScrollImageView.m in Sources */,
+				9A972C6E1E8A3D3400FC4694 /* YYClassInfo.m in Sources */,
 				9A65B8F61E7A6E9F002401B9 /* SYGuideViewCell.m in Sources */,
 				9A65B9081E7A6E9F002401B9 /* SYUnReadView.m in Sources */,
 				9A7412A81E836C820047647B /* AppDelegate+SFLog.m in Sources */,
